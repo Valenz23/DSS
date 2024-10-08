@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Practica1Application",
+            "request": "launch",
+            "mainClass": "com.dss.Practica1.Practica1Application",
+            "projectName": "Practica1"
+        },
+        {
+            "type": "java",
             "name": "Spring Boot-Application11Application<Application11>",
             "request": "launch",
             "cwd": "${workspaceFolder}",
