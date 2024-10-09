@@ -2,42 +2,34 @@ package dss.pvalenz23.practica1.servicios;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import dss.pvalenz23.practica1.excepciones.RecursoNoEncontrado;
 import dss.pvalenz23.practica1.modelos.Producto;
-import dss.pvalenz23.practica1.repositorios.RepoProducto;
+import dss.pvalenz23.practica1.repositorios.RepoProductos;
 import lombok.RequiredArgsConstructor;
 
 @Service
 @RequiredArgsConstructor
-public class ServicioProducto implements IServicioProducto {
-    private final RepoProducto repoProducto;
+public class ServicioProducto {
 
-    @Override
-    public List<Producto> getAllProductos() {
-        return repoProducto.findAll();
+    @Autowired
+    private RepoProductos repoProductos;
+
+    public List<Producto> getAllProductos() {        
+        return repoProductos.findAll();
     }
 
-    @Override
-    public Producto geProductoById(Long id) {
-        return repoProducto.findById(id)
-            .orElseThrow(
-                () -> new RecursoNoEncontrado("Producto no encontrado.")
-            );
+    public Producto getProductoById(Long id) {
+        return repoProductos.findById(id).orElse(null);
     }
 
-    @Override
     public Producto saveProducto(Producto producto) {
-        return repoProducto.save(producto);
+        return repoProductos.save(producto);
     }
 
-    @Override
     public void deleteProducto(Long id) {
-        repoProducto.findById(id)
-            .ifPresentOrElse(repoProducto::delete, 
-                () -> new RecursoNoEncontrado("Producto no encontrado.")
-            );
+        repoProductos.deleteById(id);
     }
 
 }
