@@ -23,7 +23,7 @@ public class ControladorProducto {
 
     @GetMapping
     public String getProductos(Model model) {
-        model.addAttribute("productos", servicioProducto.getAllProductos());
+        model.addAttribute("producto", servicioProducto.getAllProductos());
         return "productos";
     }
 
