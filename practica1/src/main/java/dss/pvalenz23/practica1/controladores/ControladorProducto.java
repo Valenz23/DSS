@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import dss.pvalenz23.practica1.modelos.Producto;
 import dss.pvalenz23.practica1.servicios.ServicioProducto;
 import org.springframework.web.bind.annotation.GetMapping;
-
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PostMapping;
 
@@ -23,21 +22,25 @@ public class ControladorProducto {
 
     @GetMapping
     public String getProductos(Model model) {
-        model.addAttribute("producto", servicioProducto.getAllProductos());
+        model.addAttribute("productos", servicioProducto.getAllProductos());
         return "productos";
+    }
+
+    @GetMapping("formulario-producto")
+    public String formularioProducto(){
+        return "formulario-producto";
     }
 
     @PostMapping("/add")
-    public String addProducto(@RequestParam String name, @RequestParam double price) {
-        Producto nuevo = new Producto(name, price);
-        servicioProducto.saveProducto(nuevo);
-        return "productos";
+    public String addProducto(@RequestParam("nombre") String nombre, @RequestParam("precio") double precio) {
+        servicioProducto.saveProducto(new Producto(nombre, precio));
+        return "redirect:/productos";
+    }
+
+    @PostMapping("/delete")
+    public String eliminarProducto(@RequestParam("id") Long id) {
+        servicioProducto.deleteProducto(id);
+        return "redirect:/productos"; 
     }
     
-    
-
-    // @RequestMapping(value = "/producto")
-    //     public String producto(){
-    //         return "producto";
-    //     }
 }

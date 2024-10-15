@@ -8,22 +8,44 @@
     </head>
     <body class="p-3 mb-2 bg-dark text-white">
         <div>            
+
+            <div>
+                <h1>Index</h1>        
+                <a class="btn btn-success" href="productos/formulario-producto" role="button">Añadir producto</a>
+            </div>
+
             <h1> Lista de productos </h1>
-            <table class="table table-dark table-striped">
-                <tr>
-                    <th>ID</th>
-                    <th>Nombre</th>
-                    <th>Precio</th>
-                </tr>
-                <tr th:each="producto : ${producto}">
-                    <td th:text="${producto.id}"></td>
-                    <td th:text="${producto.nombre}"></td>
-                    <td th:text="${producto.precio}"></td>
-                </tr>
-            </table>
-            
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-3 mb-3" th:each="producto : ${productos}">
+                        <div class="card">
+                            <!--<img th:src="@{/ruta/imagen/producto.png}" class="card-img-top" alt="Imagen del producto">-->
+                            <div class="card-body">
+                                <h5 class="card-title" th:text="${producto.nombre}">Nombre del producto</h5>
+                                <p class="card-text">
+                                    <!-- ID: <span th:text="${producto.id}">ID del producto</span><br> -->
+                                    Precio: <span th:text="${producto.precio} + '€'">0.00€</span>
+                                </p>
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <form th:action="@{/productos/edit}" method="post">
+                                            <input type="hidden" name="id" th:value="${producto.id}"/>
+                                            <button type="submit" class="btn btn-warning">Editar</button>
+                                        </form>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <form th:action="@{/productos/delete}" method="post">
+                                            <input type="hidden" name="id" th:value="${producto.id}"/>
+                                            <button type="submit" class="btn btn-danger">Borrar</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>            
         </div>        
-        <a class="btn btn-success" href="/" role="button">Volver</a>
     </body>
 </html>
 
