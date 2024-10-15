@@ -26,8 +26,16 @@ public class ControladorProducto {
         return "productos";
     }
 
-    @GetMapping("formulario-producto")
-    public String formularioProducto(){
+    @GetMapping("nuevo")
+    public String formularioNuevoProducto(Model model){
+        model.addAttribute("producto", new Producto());
+        return "formulario-producto";
+    }
+
+    @PostMapping("detalles")
+    public String formularioEditarProducto(@RequestParam("id") Long id, Model model){
+        Producto producto = servicioProducto.getProductoById(id);
+        model.addAttribute("producto", producto);
         return "formulario-producto";
     }
 
@@ -40,6 +48,15 @@ public class ControladorProducto {
     @PostMapping("/delete")
     public String eliminarProducto(@RequestParam("id") Long id) {
         servicioProducto.deleteProducto(id);
+        return "redirect:/productos"; 
+    }
+
+    @PostMapping("/update")
+    public String actualizarProducto(@RequestParam("id") Long id, @RequestParam("nombre") String nombre, @RequestParam("precio") double precio) {
+        Producto producto = servicioProducto.getProductoById(id);
+        producto.setNombre(nombre);
+        producto.setPrecio(precio);
+        servicioProducto.saveProducto(producto);
         return "redirect:/productos"; 
     }
     

@@ -11,7 +11,7 @@
 
             <div>
                 <h1>Index</h1>        
-                <a class="btn btn-success" href="productos/formulario-producto" role="button">Añadir producto</a>
+                <a class="btn btn-success" href="productos/nuevo" role="button">Añadir producto</a>
             </div>
 
             <h1> Lista de productos </h1>
@@ -28,7 +28,7 @@
                                 </p>
                                 <div class="row">
                                     <div class="col-md-3">
-                                        <form th:action="@{/productos/edit}" method="post">
+                                        <form th:action="@{/productos/detalles}" method="post">
                                             <input type="hidden" name="id" th:value="${producto.id}"/>
                                             <button type="submit" class="btn btn-warning">Editar</button>
                                         </form>

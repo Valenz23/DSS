@@ -9,21 +9,21 @@
     <body class="p-3 mb-2 bg-dark text-white">
 
         <div>
-            <h1>Detalles del producto</h1>
+            <h1 th:text="${producto.nombre != null} ? 'Editar Producto' : 'Añadir Producto'">Formulario Producto</h1>
             <br>
-            <form action="/productos/add" method="POST">
+            <form th:action="${producto.nombre != null} ? @{'/productos/update'} : @{'/productos/add'}"  method="POST">
+                <input type="hidden" name="id" th:value="${producto.id}" />
                 <div class="mb-3">
                     <label class="form-label">Nombre</label>
-                    <input type="text" class="form-control" id="nombre" name="nombre" required>
+                    <input type="text" class="form-control" name="nombre" th:value="${producto.nombre}" required>
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Precio</label>
-                    <input type="number" class="form-control" id="precio" name="precio" step="0.01" required>
+                    <input type="number" class="form-control" name="precio" step="0.01" th:value="${producto.precio}" required>
                 </div>
-                <button type="submit" class="btn btn-success">Guardar</button>
+                <button type="submit" class="btn btn-success" th:text="${producto.id != null && producto.id > 0} ? 'Actualizar' : 'Añadir'"></button>
                 <a class="btn btn-success" href="/productos" role="button">Cancelar</a>            
-            </form>
-            
+            </form>            
         </div>
 
     </body>
