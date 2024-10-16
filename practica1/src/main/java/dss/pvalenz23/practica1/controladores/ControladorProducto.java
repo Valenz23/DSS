@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 
 @Controller
-@RequestMapping("/productos")
+@RequestMapping("productos")
 public class ControladorProducto {
 
     @Autowired
@@ -39,19 +39,19 @@ public class ControladorProducto {
         return "formulario-producto";
     }
 
-    @PostMapping("/add")
+    @PostMapping("add")
     public String addProducto(@RequestParam("nombre") String nombre, @RequestParam("precio") double precio) {
         servicioProducto.saveProducto(new Producto(nombre, precio));
         return "redirect:/productos";
     }
 
-    @PostMapping("/delete")
+    @PostMapping("delete")
     public String eliminarProducto(@RequestParam("id") Long id) {
         servicioProducto.deleteProducto(id);
         return "redirect:/productos"; 
     }
 
-    @PostMapping("/update")
+    @PostMapping("update")
     public String actualizarProducto(@RequestParam("id") Long id, @RequestParam("nombre") String nombre, @RequestParam("precio") double precio) {
         Producto producto = servicioProducto.getProductoById(id);
         producto.setNombre(nombre);
