@@ -11,11 +11,20 @@
 
             <div>
                 <h1>Index</h1>        
-                <a class="btn btn-success" href="productos/nuevo" role="button">Añadir producto</a>
+                <!--<a class="btn btn-success" href="productos/nuevo" role="button">Añadir producto</a>-->
                 <a class="btn btn-success" href="carrito" role="button">Ver carrito</a>
+
+                <!-- LOGOUT -->
+                <form th:action="@{/logout}" method="post">
+                    <input type="submit" class="btn btn-danger" value="Desconectar"/>
+                </form>
+
             </div>
 
             <h1> Lista de productos </h1>
+            
+            
+
             <div class="container">
                 <div class="row">
                     <div class="col-sm-3 mb-3" th:each="producto : ${productos}">
@@ -28,6 +37,7 @@
                                     Precio: <span th:text="${producto.precio} + '€'">0.00€</span>
                                 </p>                                
                                 <div class="row">
+                                    <!--
                                     <div class="col-md-3">
                                         <form th:action="@{/productos/detalles}" method="post">
                                             <input type="hidden" name="id" th:value="${producto.id}"/>
@@ -40,6 +50,7 @@
                                             <button type="submit" class="btn btn-danger">Borrar</button>
                                         </form>
                                     </div>
+                                    -->
                                     <div class="col-md-5">
                                         <form th:action="@{/carrito/add}" method="post">
                                             <input type="hidden" name="id" th:value="${producto.id}"/>                                               
