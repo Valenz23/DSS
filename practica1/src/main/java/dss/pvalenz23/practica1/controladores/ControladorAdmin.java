@@ -26,15 +26,16 @@ public class ControladorAdmin {
 
     @GetMapping("nuevo")
     public String formularioNuevoProducto(Model model){
-        model.addAttribute("producto", new Producto());
-        return "formulario-producto";
+        model.addAttribute("productoDetalles", new Producto());
+        return "admin";
     }
 
     @PostMapping("detalles")
     public String formularioEditarProducto(@RequestParam("id") Long id, Model model){
         Producto producto = servicioProducto.getProductoById(id);
-        model.addAttribute("producto", producto);
-        return "formulario-producto";
+        model.addAttribute("productoDetalles", producto);
+        model.addAttribute("productos", servicioProducto.getAllProductos());
+        return "admin";
     }
 
     @PostMapping("add")

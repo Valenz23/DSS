@@ -32,7 +32,7 @@ public class ConfigSeguridad {
             .authorizeHttpRequests(authorizeRequests -> {
                 authorizeRequests   
                     // .requestMatchers("/", "/productos", "/carrito", "carrito/**").permitAll()
-                    .requestMatchers("/", "/productos", "/carrito", "carrito/**").hasRole("USER")
+                    .requestMatchers("/", "/productos", "/productos/**", "/carrito", "carrito/**").hasRole("USER")
                     .requestMatchers("/admin","/admin/**").hasRole("ADMIN")
                     .anyRequest().authenticated();
             })

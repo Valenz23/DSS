@@ -6,36 +6,33 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
         <title>Login</title>
     </head>
-    <body class="p-3 mb-2 bg-dark text-white">
+    <body class="bg-dark text-white">
 
-        <div>
-            <h1>Login</h1>
-            <br>
+        <div class="container vh-100 d-flex justify-content-center align-items-center">
+            <div class="card p-4 bg-light text-dark col-md-4">
+                <div class="card-body">
 
-            <form th:action="@{/login}"  method="POST">
-                <div class="mb-3">
-                    <div class="col-2">
-                        <label class="form-label">Usuario</label>
-                        <input type="text" class="form-control" name="username" required>
+                    <h2 class="text-center mb-4">La Tienda de Pablito</h2>
+
+                    <div class="alert alert-danger" role="alert" th:if="${param.error}">
+                        Usuario o contraseña incorrectos
                     </div>
+
+                    <form th:action="@{/login}"  method="POST">
+                        <div class="mb-3">                    
+                            <label class="form-label">Usuario</label>
+                            <input type="text" class="form-control" name="username" required>
+                        </div>
+                        <div class="mb-3">    
+                            <label class="form-label">Contraseña</label>     
+                            <input type="password" class="form-control" name="password" required>
+                        </div>
+                        <br>
+                        <button type="submit" class="btn btn-success w-100">Loguearse</button>        
+                    </form>       
+
                 </div>
-                <div class="mb-3">                    
-                    <div class="col-2">
-                        <label class="form-label">Contraseña</label>
-                        <input type="password" class="form-control" name="password" required>
-                    </div>
-                </div>
-                <br>
-                <button type="submit" class="btn btn-success">Loguearse</button>        
-            </form>      
-            
-            <div th:if="${param.error}">
-                Invalid username and password.
-            </div>
-            <div th:if="${param.logout}">
-                You have been logged out.
-            </div>
-            
+            </div>            
         </div>
 
     </body>
