@@ -13,9 +13,14 @@
             <!-- Encabezado -->
             <div class="d-flex justify-content-between align-items-center mb-4">
                 <h1 class="text-light">La Tienda de Pablito - Admin</h1>
-                <form th:action="@{/logout}" method="post">
-                    <input type="submit" class="btn btn-danger" value="Desconectar"/>
-                </form>
+                <div class="d-flex">
+                    <form th:action="@{/admin/exportarSQL}" method="get" class="me-2">
+                        <button type="submit" class="btn btn-primary">Exportar SQL</button>
+                    </form>
+                    <form th:action="@{/logout}" method="post">
+                        <input type="submit" class="btn btn-danger" value="Desconectar"/>
+                    </form>
+                </div>
             </div>
 
             <!-- Formulario Producto -->
