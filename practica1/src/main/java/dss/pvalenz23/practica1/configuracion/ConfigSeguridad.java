@@ -26,27 +26,31 @@ import java.util.Collection;
 @EnableWebSecurity
 public class ConfigSeguridad {
     
+    @SuppressWarnings("removal")
     @Bean
-	public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
-		http
+    public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
+        http
             .authorizeHttpRequests(authorizeRequests -> {
-                authorizeRequests   
-                    // .requestMatchers("/", "/productos", "/carrito", "carrito/**").permitAll()
-                    .requestMatchers("/", "/productos", "/productos/**", "/carrito", "carrito/**").hasRole("USER")
-                    .requestMatchers("/admin","/admin/**").hasRole("ADMIN")
+                authorizeRequests
+                    .requestMatchers("/", "/productos", "/productos/**", "/carrito", "/carrito/**").hasRole("USER")
+                    .requestMatchers("/admin", "/admin/**").hasRole("ADMIN")
+                    .requestMatchers("/h2-console/**").permitAll()  // Permitir acceso a la consola H2
                     .anyRequest().authenticated();
             })
-                .formLogin(formLogin -> formLogin
-                .loginPage("/login")     
-                .successHandler(customAuthenticationSuccessHandler())           
+            .formLogin(formLogin -> formLogin
+                .loginPage("/login")
+                .successHandler(customAuthenticationSuccessHandler())
                 .permitAll()
             )
-                .logout(logout -> logout
+            .logout(logout -> logout
                 .logoutUrl("/logout")
                 .logoutSuccessUrl("/login")
-            );
-        return http.build();        
-	}
+            )
+            .csrf(csrf -> csrf.ignoringRequestMatchers("/h2-console/**")) 
+            .headers(headers -> headers.frameOptions().sameOrigin()); 
+    
+        return http.build();
+    }
 
 	@Bean
 	public InMemoryUserDetailsManager userDetailsService() {
