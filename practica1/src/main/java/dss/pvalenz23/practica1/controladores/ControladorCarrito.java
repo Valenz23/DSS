@@ -69,12 +69,12 @@ public class ControladorCarrito {
     public ResponseEntity<byte[]> generarPdfCompra(Model model) throws FileNotFoundException {
 
         try {
-            byte[] pdfBytes = servicioPDF.generarPdfCompra(servicioCarrito.getCarrito());
+            byte[] pdfBytes = servicioPDF.generarPdfCompra(servicioCarrito.getCarrito());            
+            servicioCarrito.clearCarrito();
 
             HttpHeaders headers = new HttpHeaders();
             headers.setContentType(MediaType.APPLICATION_PDF);
             headers.setContentDispositionFormData("inline", "compra.pdf");
-            servicioCarrito.clearCarrito();
 
             return new ResponseEntity<>(pdfBytes, headers, HttpStatus.OK);
 
