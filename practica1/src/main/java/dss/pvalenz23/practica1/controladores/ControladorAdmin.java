@@ -3,6 +3,7 @@ package dss.pvalenz23.practica1.controladores;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
@@ -27,8 +28,17 @@ public class ControladorAdmin {
     private ServicioProducto servicioProducto;
 
     @GetMapping
-    public String getProductos(Model model) {
-        model.addAttribute("productos", servicioProducto.getAllProductos());
+    public String getProductos(@RequestParam(value = "query", required = false) String query, Model model) {
+        List<Producto> productos = servicioProducto.getProductoByNombre(query);
+
+        if(query != null && !query.isEmpty()){
+            model.addAttribute("titulo", "Resultados de búsqueda para: " + query);
+        } 
+        else {
+            model.addAttribute("titulo", "Lista de productos");
+        }
+
+        model.addAttribute("productos", productos);
         return "admin";
     }
 
