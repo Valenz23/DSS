@@ -24,6 +24,13 @@ public class ServicioProducto {
         return repoProductos.findById(id).orElse(null);
     }
 
+    public List<Producto> getProductoByNombre(String nombre) {
+        if(nombre == null || nombre.isEmpty()){
+            return getAllProductos();
+        }
+        return repoProductos.findByNombreContainingIgnoreCase(nombre);                             
+    }
+
     public Producto saveProducto(Producto producto) {
         return repoProductos.save(producto);
     }
