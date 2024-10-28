@@ -51,6 +51,7 @@ public class ControladorAdmin {
     @PostMapping("detalles")
     public String formularioEditarProducto(@RequestParam("id") Long id, Model model){
         Producto producto = servicioProducto.getProductoById(id);
+        model.addAttribute("titulo", "Lista de productos");
         model.addAttribute("productoDetalles", producto);
         model.addAttribute("productos", servicioProducto.getAllProductos());
         return "admin";
