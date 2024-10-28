@@ -35,7 +35,7 @@ public class ServicioPDF {
 
         // Titulo del Pdf
         Font fontTitulo = FontFactory.getFont(FontFactory.HELVETICA_BOLD, 18);
-        Paragraph titulo = new Paragraph("La tienda de Pablito", fontTitulo);
+        Paragraph titulo = new Paragraph("La tienda de pValenz", fontTitulo);
         titulo.setAlignment(Element.ALIGN_CENTER);
         document.add(titulo);
         document.add(new Paragraph(" "));
