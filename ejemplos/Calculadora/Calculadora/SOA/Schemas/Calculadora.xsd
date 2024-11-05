@@ -3,13 +3,13 @@
             targetNamespace="http://www.example.org" elementFormDefault="qualified">
   <xsd:complexType name="TipoPeticionSuma">
     <xsd:sequence>
-      <xsd:element name="num1" type="xsd:string"/>
-      <xsd:element name="num2" type="xsd:string"/>
+      <xsd:element name="num1" type="xsd:double"/>
+      <xsd:element name="num2" type="xsd:double"/>
     </xsd:sequence>
   </xsd:complexType>
   <xsd:complexType name="TipoRespuestaSuma">
     <xsd:sequence>
-      <xsd:element name="respuesta" type="xsd:string"/>
+      <xsd:element name="respuesta" type="xsd:double"/>
     </xsd:sequence>
   </xsd:complexType>
   <xsd:element name="PeticionSuma" type="TipoPeticionSuma"/>
