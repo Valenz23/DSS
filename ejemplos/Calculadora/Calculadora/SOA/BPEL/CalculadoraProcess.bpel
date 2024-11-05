@@ -72,7 +72,7 @@
     <assign name="AssignSuma">
       <copy>
         <from>$inputVariable.payload/ns1:num1+$inputVariable.payload/ns1:num2</from>
-        <to expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath1.0">$outputVariable.payload</to>
+        <to expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath1.0">$outputVariable.payload/ns1:respuesta</to>
       </copy>
     </assign>
     <!-- Generate reply to synchronous request -->

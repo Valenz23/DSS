@@ -1,13 +1,2 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Faults>
-   <Fault>
-      <severity>warning</severity>
-      <loc>/*[namespace-uri()='http://docs.oasis-open.org/wsbpel/2.0/process/executable'][local-name()='process']/*[namespace-uri()='http://docs.oasis-open.org/wsbpel/2.0/process/executable'][local-name()='sequence'][@name='main']/*[namespace-uri()='http://docs.oasis-open.org/wsbpel/2.0/process/executable'][local-name()='assign'][@name='AssignSuma']/*[namespace-uri()='http://docs.oasis-open.org/wsbpel/2.0/process/executable'][local-name()='copy']</loc>
-      <line>73</line>
-      <col/>
-      <file>BPEL/CalculadoraProcess.bpel</file>
-      <name>BPEL/CalculadoraProcess.bpel</name>
-      <fix>Types must be compatible.</fix>
-      <msg>The from-spec of "xsd:double" is not compatible with to-spec of "ns1:TipoRespuestaSuma"</msg>
-   </Fault>
-</Faults>
+<Faults/>
