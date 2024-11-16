@@ -74,7 +74,7 @@
         <![CDATA[bussines=Pablo]]>
       </documentation>
       <condition>xp20:upper-case($inputVariable.payload/client:nombre)='PABLO'</condition>
-      <assign name="AssignBussines">
+      <assign name="AssignClaseBussines">
         <copy>
           <from>string('bussines')</from>
           <to expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath1.0">$outputVariable.payload/client:clase</to>
@@ -85,7 +85,7 @@
           <![CDATA[privado=Juana]]>
         </documentation>
         <condition>xp20:upper-case($inputVariable.payload/client:nombre)='JUANA'</condition>
-        <assign name="AssignPrivado">
+        <assign name="AssignClasePrivado">
           <copy>
             <from>string('privado')</from>
             <to expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath1.0">$outputVariable.payload/client:clase</to>
@@ -96,7 +96,7 @@
         <documentation>
           <![CDATA[turista]]>
         </documentation>
-        <assign name="AssignTurista">
+        <assign name="AssignClaseTurista">
           <copy>
             <from>string('turista')</from>
             <to expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath1.0">$outputVariable.payload/client:clase</to>

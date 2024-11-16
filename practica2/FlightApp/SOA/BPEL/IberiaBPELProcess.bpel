@@ -69,12 +69,31 @@
 
     <!-- Receive input from requestor. (Note: This maps to operation defined in IberiaBPELProcess.wsdl) -->
     <receive name="receiveInput" partnerLink="iberiabpelprocess_client" portType="client:IberiaBPELProcess" operation="process" variable="inputVariable" createInstance="yes"/>
+    <if name="If_check_fecha">
+      <documentation>
+        <![CDATA[correcto]]>
+      </documentation>
+      <condition>($inputVariable.payload/client:fecha_vuelta &gt;= $inputVariable.payload/client:fecha_ida) and ($inputVariable.payload/client:fecha_ida &gt;= xp20:current-dateTime())</condition>
+      <empty name="EmptyCorrecto"/>
+      <else>
+        <documentation>
+          <![CDATA[incorrecto]]>
+        </documentation>
+        <throw name="ErrorFecha" faultName="bpel:invalidVariables" faultVariable="inputVariable">
+          <bpelx:annotation>
+            <bpelx:documentation>
+              <![CDATA[Las fechas introducidas son incorrectas. Asegurese de que la fecha de ida no es superior a la fecha de vuelta]]>
+            </bpelx:documentation>
+          </bpelx:annotation>
+        </throw>
+      </else>
+    </if>
     <if name="If_aeropuerto">
       <documentation>
         <![CDATA[Granada]]>
       </documentation>
       <condition>$inputVariable.payload/client:aeropuerto='Granada'</condition>
-      <assign name="AssignGranada">
+      <assign name="AssignPrecioGranada">
         <copy>
           <from>200</from>
           <to expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath1.0">$outputVariable.payload/client:precio</to>
@@ -84,7 +103,7 @@
         <documentation>
           <![CDATA[Otros]]>
         </documentation>
-        <assign name="AssignOtro">
+        <assign name="AssignPrecioOtro">
           <copy>
             <from>125</from>
             <to expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath1.0">$outputVariable.payload/client:precio</to>

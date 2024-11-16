@@ -6,10 +6,10 @@
    <partnerlink_locations>
       <partnerlink name="flightappbpelprocess_client" x="0" y="574" side="left"/>
       <partnerlink name="BinterBPELProcess.binterbpelprocess_client" x="0" y="668" side="left"/>
-      <partnerlink name="IberiaBPELProcess.iberiabpelprocess_client" x="719" y="476" side="right"/>
-      <partnerlink name="EmpleadoBPELProcess.empleadobpelprocess_client" x="719" y="284" side="right"/>
+      <partnerlink name="IberiaBPELProcess.iberiabpelprocess_client" x="728" y="476" side="right"/>
+      <partnerlink name="EmpleadoBPELProcess.empleadobpelprocess_client" x="728" y="284" side="right"/>
    </partnerlink_locations>
-   <graph_layout viewport="0,0,953,481" show_swimlanes="true">
+   <graph_layout viewport="0,646,962,496" show_swimlanes="true">
       <layout_item collapsed="false" xpath="/process" type="process" showhandlers="true"/>
       <layout_item collapsed="false" xpath="/process/sequence" type="sequence"/>
    </graph_layout>

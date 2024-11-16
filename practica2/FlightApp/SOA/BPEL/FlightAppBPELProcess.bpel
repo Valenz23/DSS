@@ -136,7 +136,7 @@
     <invoke name="InvokeBinter" partnerLink="BinterBPELProcess.binterbpelprocess_client"
             portType="ns2:BinterBPELProcess" operation="process" inputVariable="InvokeBinter_process_InputVariable"
             outputVariable="InvokeBinter_process_OutputVariable" bpelx:invokeAsDetail="no"/>
-    <if name="If_precio">
+    <if name="If_compara_precio">
       <documentation>
         <![CDATA[iberia]]>
       </documentation>
