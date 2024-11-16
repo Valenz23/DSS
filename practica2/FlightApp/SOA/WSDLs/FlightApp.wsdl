@@ -13,7 +13,8 @@
 	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->   
 	<wsdl:types>
 		<schema xmlns="http://www.w3.org/2001/XMLSchema">
-			<import namespace="http://xmlns.oracle.com/practica2/FlightApp/FlightAppBPELProcess" schemaLocation="../Schemas/FlightAppBPELProcess.xsd" />
+			<import namespace="http://xmlns.oracle.com/practica2/FlightApp/FlightAppBPELProcess"
+           schemaLocation="../Schemas/FlightApo.xsd" />
 		</schema>
 	</wsdl:types>
 

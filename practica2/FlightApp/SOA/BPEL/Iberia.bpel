@@ -28,7 +28,8 @@
          xmlns:ids="http://xmlns.oracle.com/bpel/services/IdentityService/xpath"
          xmlns:ldap="http://schemas.oracle.com/xpath/extension/ldap">
 
-    <import ui:processWSDL="true" namespace="http://xmlns.oracle.com/practica2/FlightApp/IberiaBPELProcess" location="../WSDLs/IberiaBPELProcess.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
+    <import ui:processWSDL="true" namespace="http://xmlns.oracle.com/practica2/FlightApp/IberiaBPELProcess"
+            location="../WSDLs/Iberia.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
     <!-- 
       ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         PARTNERLINKS                                                      
