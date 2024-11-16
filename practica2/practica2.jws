@@ -25,5 +25,6 @@
    </list>
    <list n="listOfChildren">
       <hash><url n="URL" path="FlightApp/FlightApp.jpr"/></hash>
+      <hash><url n="URL" path="ShoppingApp/ShoppingApp.jpr"/></hash>
    </list>
 </jws:workspace>
