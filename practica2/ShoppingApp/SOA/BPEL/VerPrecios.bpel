@@ -74,7 +74,7 @@
         <![CDATA[raton]]>
       </documentation>
       <condition>xp20:upper-case($inputVariable.payload/client:producto)='RATON'</condition>
-      <assign name="AssignRaton">
+      <assign name="AssignCantidadRaton">
         <copy>
           <from>10</from>
           <to expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath1.0">$outputVariable.payload/client:precio</to>
@@ -89,7 +89,7 @@
           <![CDATA[teclado]]>
         </documentation>
         <condition>xp20:upper-case($inputVariable.payload/client:producto)='TECLADO'</condition>
-        <assign name="AssignTeclado">
+        <assign name="AssignCantidadTeclado">
           <copy>
             <from>25</from>
             <to expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath1.0">$outputVariable.payload/client:precio</to>

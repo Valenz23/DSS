@@ -89,57 +89,74 @@
         </throw>
       </else>
     </if>
-    <if name="If_aeropuerto">
-      <documentation>
-        <![CDATA[Granada]]>
-      </documentation>
-      <condition>$inputVariable.payload/client:aeropuerto='Granada'</condition>
-      <assign name="AssignPrecioGranada">
-        <copy>
-          <from>200</from>
-          <to expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath1.0">$outputVariable.payload/client:precio</to>
-        </copy>
-      </assign>
-      <else>
-        <documentation>
-          <![CDATA[Otros]]>
-        </documentation>
-        <assign name="AssignPrecioOtro">
-          <copy>
-            <from>125</from>
-            <to expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath1.0">$outputVariable.payload/client:precio</to>
-          </copy>
-        </assign>
-      </else>
-    </if>
     <if name="If_clase">
       <documentation>
-        <![CDATA[bussines]]>
+        <![CDATA[primera]]>
       </documentation>
-      <condition>$inputVariable.payload/client:empleado_clase='bussines'</condition>
-      <assign name="AssignPrecioBussines">
+      <condition>$inputVariable.payload/client:empleado_clase='Primera'</condition>
+      <assign name="x30">
         <copy>
-          <from>$outputVariable.payload/client:precio*1.2</from>
+          <from>30</from>
           <to expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath1.0">$outputVariable.payload/client:precio</to>
         </copy>
       </assign>
       <elseif>
         <documentation>
-          <![CDATA[privado]]>
+          <![CDATA[segunda]]>
         </documentation>
-        <condition>$inputVariable.payload/client:empleado_clase='privado'</condition>
-        <assign name="AssignPrecioPrivado">
+        <condition>$inputVariable.payload/client:empleado_clase='Segunda'</condition>
+        <assign name="x18">
           <copy>
-            <from>$outputVariable.payload/client:precio*1.4</from>
+            <from>18</from>
             <to expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath1.0">$outputVariable.payload/client:precio</to>
           </copy>
         </assign>
       </elseif>
       <else>
         <documentation>
-          <![CDATA[turista]]>
+          <![CDATA[tercera]]>
         </documentation>
-        <empty name="EmptyPrecioTurista"/>
+        <assign name="x12.5">
+          <copy>
+            <from>12.5</from>
+            <to expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath1.0">$outputVariable.payload/client:precio</to>
+          </copy>
+        </assign>
+      </else>
+    </if>
+    <if name="If_aeropuerto">
+      <documentation>
+        <![CDATA[Granada]]>
+      </documentation>
+      <condition>xp20:upper-case($inputVariable.payload/client:aeropuerto)='GRANADA'</condition>
+      <assign name="x20">
+        <copy>
+          <from>$outputVariable.payload/client:precio*20</from>
+          <to expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath1.0">$outputVariable.payload/client:precio</to>
+        </copy>
+      </assign>
+      <elseif>
+        <documentation>
+          <![CDATA[Malaga]]>
+        </documentation>
+        <condition>xp20:upper-case($inputVariable.payload/client:aeropuerto)='MALAGA'</condition>
+        <assign name="x10">
+          <copy>
+            <from>$outputVariable.payload/client:precio*10</from>
+            <to expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath1.0">$outputVariable.payload/client:precio</to>
+          </copy>
+        </assign>
+      </elseif>
+      <else>
+        <documentation>
+          <![CDATA[Otro]]>
+        </documentation>
+        <assign name="x15">
+          <copy>
+            <from>$outputVariable.payload/client:precio*15</from>
+            <to expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath1.0">$outputVariable.payload/client:precio</to>
+          </copy>
+        </assign>
       </else>
     </if>
     <!-- Generate reply to synchronous request -->

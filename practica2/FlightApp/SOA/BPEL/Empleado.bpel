@@ -72,34 +72,34 @@
     <receive name="receiveInput" partnerLink="empleadobpelprocess_client" portType="client:EmpleadoBPELProcess" operation="process" variable="inputVariable" createInstance="yes"/>
     <if name="If_clase">
       <documentation>
-        <![CDATA[bussines=Pablo]]>
+        <![CDATA[primera=Pablo]]>
       </documentation>
       <condition>xp20:upper-case($inputVariable.payload/client:nombre)='PABLO'</condition>
-      <assign name="AssignClaseBussines">
+      <assign name="AssignClasePrimera">
         <copy>
-          <from>string('bussines')</from>
+          <from>string('Primera')</from>
           <to expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath1.0">$outputVariable.payload/client:clase</to>
         </copy>
       </assign>
       <elseif>
         <documentation>
-          <![CDATA[privado=Juana]]>
+          <![CDATA[segunda=Juana]]>
         </documentation>
         <condition>xp20:upper-case($inputVariable.payload/client:nombre)='JUANA'</condition>
-        <assign name="AssignClasePrivado">
+        <assign name="AssingClaseSegunda">
           <copy>
-            <from>string('privado')</from>
+            <from>string('Segunda')</from>
             <to expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath1.0">$outputVariable.payload/client:clase</to>
           </copy>
         </assign>
       </elseif>
       <else>
         <documentation>
-          <![CDATA[turista]]>
+          <![CDATA[tercera]]>
         </documentation>
-        <assign name="AssignClaseTurista">
+        <assign name="AssignClaseOtra">
           <copy>
-            <from>string('turista')</from>
+            <from>string('Tercera')</from>
             <to expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath1.0">$outputVariable.payload/client:clase</to>
           </copy>
         </assign>
