@@ -57,12 +57,12 @@
         </dgm:operations>
     </dgm:gService>
     <dgm:gComponent name="FlightAppBPELProcess">
-        <dgm:body borderWidth="2" arcRad="20" X="255" Y="201" width="130" height="111">
+        <dgm:body borderWidth="2" arcRad="20" X="341" Y="201" width="130" height="111">
             <dgm:borderColor r="69" g="113" b="140"/>
             <dgm:lightBgColor r="166" g="208" b="230"/>
             <dgm:darkBgColor r="99" g="162" b="201"/>
         </dgm:body>
-        <dgm:shadow arcRad="20" X="245" Y="194" width="150" height="127">
+        <dgm:shadow arcRad="20" X="331" Y="194" width="150" height="127">
             <dgm:bgColor r="196" g="228" b="240"/>
         </dgm:shadow>
         <dgm:inputPort name="flightappbpelprocess_client" X="-10" Y="15" diameter="20" imageURI="oracle/tip/tools/ide/fabric/resource/image/visuals_rd1/servicereference.png" interface="http://xmlns.oracle.com/practica2/FlightApp/FlightAppBPELProcess#wsdl.interface(FlightAppBPELProcess)"/>
@@ -72,36 +72,36 @@
         <dgm:nodeIcon URI="/oracle/tip/tools/ide/bpel/shared/plugins/resources/images/soa/process_20x20.png" X="10" Y="4" width="20" height="20"/>
     </dgm:gComponent>
     <dgm:gComponent name="IberiaBPELProcess">
-        <dgm:body borderWidth="2" arcRad="20" X="483" Y="111" width="130" height="61">
+        <dgm:body borderWidth="2" arcRad="20" X="654" Y="111" width="130" height="61">
             <dgm:borderColor r="69" g="113" b="140"/>
             <dgm:lightBgColor r="166" g="208" b="230"/>
             <dgm:darkBgColor r="99" g="162" b="201"/>
         </dgm:body>
-        <dgm:shadow arcRad="20" X="473" Y="104" width="150" height="77">
+        <dgm:shadow arcRad="20" X="644" Y="104" width="150" height="77">
             <dgm:bgColor r="196" g="228" b="240"/>
         </dgm:shadow>
         <dgm:inputPort name="iberiabpelprocess_client" X="-10" Y="15" diameter="20" imageURI="oracle/tip/tools/ide/fabric/resource/image/visuals_rd1/servicereference.png" interface="http://xmlns.oracle.com/practica2/FlightApp/IberiaBPELProcess#wsdl.interface(IberiaBPELProcess)"/>
         <dgm:nodeIcon URI="/oracle/tip/tools/ide/bpel/shared/plugins/resources/images/soa/process_20x20.png" X="10" Y="4" width="20" height="20"/>
     </dgm:gComponent>
     <dgm:gComponent name="BinterBPELProcess">
-        <dgm:body borderWidth="2" arcRad="20" X="483" Y="206" width="130" height="61">
+        <dgm:body borderWidth="2" arcRad="20" X="654" Y="206" width="130" height="61">
             <dgm:borderColor r="69" g="113" b="140"/>
             <dgm:lightBgColor r="166" g="208" b="230"/>
             <dgm:darkBgColor r="99" g="162" b="201"/>
         </dgm:body>
-        <dgm:shadow arcRad="20" X="473" Y="199" width="150" height="77">
+        <dgm:shadow arcRad="20" X="644" Y="199" width="150" height="77">
             <dgm:bgColor r="196" g="228" b="240"/>
         </dgm:shadow>
         <dgm:inputPort name="binterbpelprocess_client" X="-10" Y="15" diameter="20" imageURI="oracle/tip/tools/ide/fabric/resource/image/visuals_rd1/servicereference.png" interface="http://xmlns.oracle.com/practica2/FlightApp/BinterBPELProcess#wsdl.interface(BinterBPELProcess)"/>
         <dgm:nodeIcon URI="/oracle/tip/tools/ide/bpel/shared/plugins/resources/images/soa/process_20x20.png" X="10" Y="4" width="20" height="20"/>
     </dgm:gComponent>
     <dgm:gComponent name="EmpleadoBPELProcess">
-        <dgm:body borderWidth="2" arcRad="20" X="483" Y="309" width="130" height="61">
+        <dgm:body borderWidth="2" arcRad="20" X="654" Y="309" width="130" height="61">
             <dgm:borderColor r="69" g="113" b="140"/>
             <dgm:lightBgColor r="166" g="208" b="230"/>
             <dgm:darkBgColor r="99" g="162" b="201"/>
         </dgm:body>
-        <dgm:shadow arcRad="20" X="473" Y="302" width="150" height="77">
+        <dgm:shadow arcRad="20" X="644" Y="302" width="150" height="77">
             <dgm:bgColor r="196" g="228" b="240"/>
         </dgm:shadow>
         <dgm:inputPort name="empleadobpelprocess_client" X="-10" Y="15" diameter="20" imageURI="oracle/tip/tools/ide/fabric/resource/image/visuals_rd1/servicereference.png" interface="http://xmlns.oracle.com/practica2/FlightApp/EmpleadoBPELProcess#wsdl.interface(EmpleadoBPELProcess)"/>
@@ -110,49 +110,49 @@
     <dgm:gWireLink source="flightappbpelprocess_client_ep" target="FlightAppBPELProcess/flightappbpelprocess_client" width="2">
         <dgm:gSegment X1="168" Y1="272" X2="192" Y2="272"/>
         <dgm:gSegment X1="192" Y1="272" X2="192" Y2="226"/>
-        <dgm:gSegment X1="192" Y1="226" X2="245" Y2="226"/>
+        <dgm:gSegment X1="192" Y1="226" X2="331" Y2="226"/>
         <dgm:baseColor r="153" g="153" b="153"/>
         <dgm:selectedColor r="49" g="106" b="196"/>
     </dgm:gWireLink>
     <dgm:gWireLink source="iberiabpelprocess_client_ep" target="IberiaBPELProcess/iberiabpelprocess_client" width="2">
-        <dgm:gSegment X1="168" Y1="36" X2="434" Y2="36"/>
-        <dgm:gSegment X1="434" Y1="36" X2="434" Y2="136"/>
-        <dgm:gSegment X1="434" Y1="136" X2="473" Y2="136"/>
+        <dgm:gSegment X1="168" Y1="36" X2="520" Y2="36"/>
+        <dgm:gSegment X1="520" Y1="36" X2="520" Y2="136"/>
+        <dgm:gSegment X1="520" Y1="136" X2="644" Y2="136"/>
         <dgm:baseColor r="153" g="153" b="153"/>
         <dgm:selectedColor r="49" g="106" b="196"/>
     </dgm:gWireLink>
     <dgm:gWireLink source="binterbpelprocess_client_ep" target="BinterBPELProcess/binterbpelprocess_client" width="2">
-        <dgm:gSegment X1="168" Y1="154" X2="449" Y2="154"/>
-        <dgm:gSegment X1="449" Y1="154" X2="449" Y2="231"/>
-        <dgm:gSegment X1="449" Y1="231" X2="473" Y2="231"/>
+        <dgm:gSegment X1="168" Y1="154" X2="535" Y2="154"/>
+        <dgm:gSegment X1="535" Y1="154" X2="535" Y2="231"/>
+        <dgm:gSegment X1="535" Y1="231" X2="644" Y2="231"/>
         <dgm:baseColor r="153" g="153" b="153"/>
         <dgm:selectedColor r="49" g="106" b="196"/>
     </dgm:gWireLink>
     <dgm:gWireLink source="empleadobpelprocess_client_ep" target="EmpleadoBPELProcess/empleadobpelprocess_client" width="2">
-        <dgm:gSegment X1="168" Y1="390" X2="419" Y2="390"/>
-        <dgm:gSegment X1="419" Y1="390" X2="419" Y2="334"/>
-        <dgm:gSegment X1="419" Y1="334" X2="473" Y2="334"/>
+        <dgm:gSegment X1="168" Y1="390" X2="505" Y2="390"/>
+        <dgm:gSegment X1="505" Y1="390" X2="505" Y2="334"/>
+        <dgm:gSegment X1="505" Y1="334" X2="644" Y2="334"/>
         <dgm:baseColor r="153" g="153" b="153"/>
         <dgm:selectedColor r="49" g="106" b="196"/>
     </dgm:gWireLink>
     <dgm:gWireLink source="FlightAppBPELProcess/IberiaBPELProcess.iberiabpelprocess_client" target="IberiaBPELProcess/iberiabpelprocess_client" width="2">
-        <dgm:gSegment X1="395" Y1="226" X2="419" Y2="226"/>
-        <dgm:gSegment X1="419" Y1="226" X2="419" Y2="136"/>
-        <dgm:gSegment X1="419" Y1="136" X2="473" Y2="136"/>
+        <dgm:gSegment X1="481" Y1="226" X2="505" Y2="226"/>
+        <dgm:gSegment X1="505" Y1="226" X2="505" Y2="136"/>
+        <dgm:gSegment X1="505" Y1="136" X2="644" Y2="136"/>
         <dgm:baseColor r="153" g="153" b="153"/>
         <dgm:selectedColor r="49" g="106" b="196"/>
     </dgm:gWireLink>
     <dgm:gWireLink source="FlightAppBPELProcess/BinterBPELProcess.binterbpelprocess_client" target="BinterBPELProcess/binterbpelprocess_client" width="2">
-        <dgm:gSegment X1="395" Y1="251" X2="434" Y2="251"/>
-        <dgm:gSegment X1="434" Y1="251" X2="434" Y2="231"/>
-        <dgm:gSegment X1="434" Y1="231" X2="473" Y2="231"/>
+        <dgm:gSegment X1="481" Y1="251" X2="520" Y2="251"/>
+        <dgm:gSegment X1="520" Y1="251" X2="520" Y2="231"/>
+        <dgm:gSegment X1="520" Y1="231" X2="644" Y2="231"/>
         <dgm:baseColor r="153" g="153" b="153"/>
         <dgm:selectedColor r="49" g="106" b="196"/>
     </dgm:gWireLink>
     <dgm:gWireLink source="FlightAppBPELProcess/EmpleadoBPELProcess.empleadobpelprocess_client" target="EmpleadoBPELProcess/empleadobpelprocess_client" width="2">
-        <dgm:gSegment X1="395" Y1="276" X2="434" Y2="276"/>
-        <dgm:gSegment X1="434" Y1="276" X2="434" Y2="334"/>
-        <dgm:gSegment X1="434" Y1="334" X2="473" Y2="334"/>
+        <dgm:gSegment X1="481" Y1="276" X2="520" Y2="276"/>
+        <dgm:gSegment X1="520" Y1="276" X2="520" Y2="334"/>
+        <dgm:gSegment X1="520" Y1="334" X2="644" Y2="334"/>
         <dgm:baseColor r="153" g="153" b="153"/>
         <dgm:selectedColor r="49" g="106" b="196"/>
     </dgm:gWireLink>
