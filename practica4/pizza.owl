@@ -352,6 +352,25 @@
     
 
 
+    <!-- http://www.pizza.com/pizza.owld#PizzaNoVegetariana -->
+
+    <owl:Class rdf:about="http://www.pizza.com/pizza.owld#PizzaNoVegetariana">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.pizza.com/pizza.owld#Pizza"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.pizza.com/pizza.owld#tieneIngrediente"/>
+                        <owl:someValuesFrom rdf:resource="http://www.pizza.com/pizza.owld#Carne"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.pizza.com/pizza.owld#Pizza"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.pizza.com/pizza.owld#PizzaSoho -->
 
     <owl:Class rdf:about="http://www.pizza.com/pizza.owld#PizzaSoho">
@@ -388,21 +407,17 @@
     <owl:Class rdf:about="http://www.pizza.com/pizza.owld#PizzaVegetariana">
         <owl:equivalentClass>
             <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.pizza.com/pizza.owld#Pizza"/>
                     <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://www.pizza.com/pizza.owld#Pizza"/>
+                        <owl:complementOf>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="http://www.pizza.com/pizza.owld#tieneCubierta"/>
-                                <owl:someValuesFrom rdf:resource="http://www.pizza.com/pizza.owld#Queso"/>
+                                <owl:someValuesFrom rdf:resource="http://www.pizza.com/pizza.owld#Carne"/>
                             </owl:Restriction>
-                        </owl:intersectionOf>
+                        </owl:complementOf>
                     </owl:Class>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.pizza.com/pizza.owld#tieneCubierta"/>
-                        <owl:someValuesFrom rdf:resource="http://www.pizza.com/pizza.owld#Vegetales"/>
-                    </owl:Restriction>
-                </owl:unionOf>
+                </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.pizza.com/pizza.owld#Pizza"/>
