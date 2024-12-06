@@ -35,6 +35,7 @@ public class ConfigSeguridad {
                     .requestMatchers("/", "/productos", "/productos/**", "/carrito", "/carrito/**").hasRole("USER")
                     .requestMatchers("/admin", "/admin/**").hasRole("ADMIN")
                     .requestMatchers("/h2-console/**").permitAll()  // Permitir acceso a la consola H2
+                    .requestMatchers("/api/**").permitAll()         // y a la API
                     .anyRequest().authenticated();
             })
             .formLogin(formLogin -> formLogin
@@ -46,7 +47,7 @@ public class ConfigSeguridad {
                 .logoutUrl("/logout")
                 .logoutSuccessUrl("/login")
             )
-            .csrf(csrf -> csrf.ignoringRequestMatchers("/h2-console/**")) 
+            .csrf(csrf -> csrf.ignoringRequestMatchers("/h2-console/**", "/api/**"))
             .headers(headers -> headers.frameOptions().sameOrigin()); 
     
         return http.build();
