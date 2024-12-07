@@ -45,6 +45,12 @@ public class ControladorRestCarrito {
         servicioCarrito.clearCarrito();
         return ResponseEntity.ok().build();
     }
+
+    @PostMapping("/comprar")
+    public ResponseEntity<Void> checkout() {
+        servicioCarrito.clearCarrito();
+        return ResponseEntity.ok().build();
+    }
     
 }
 
