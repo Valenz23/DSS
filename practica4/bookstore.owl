@@ -205,9 +205,101 @@
     
 
 
+    <!-- http://www.bookstore.com/ontology.owl#LibroCienciaFiccionBarato -->
+
+    <owl:Class rdf:about="http://www.bookstore.com/ontology.owl#LibroCienciaFiccionBarato">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.bookstore.com/ontology.owl#tieneGenero"/>
+                        <owl:allValuesFrom rdf:resource="http://www.bookstore.com/ontology.owl#CienciaFiccion"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.bookstore.com/ontology.owl#tienePrecio"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:maxExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">20</xsd:maxExclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.bookstore.com/ontology.owl#Libro"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.bookstore.com/ontology.owl#LibroDeLujo -->
+
+    <owl:Class rdf:about="http://www.bookstore.com/ontology.owl#LibroDeLujo">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.bookstore.com/ontology.owl#tienePrecio"/>
+                <owl:someValuesFrom>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">50</xsd:minInclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.bookstore.com/ontology.owl#Libro"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.bookstore.com/ontology.owl#LibroEspecífico -->
+
+    <owl:Class rdf:about="http://www.bookstore.com/ontology.owl#LibroEspecífico">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.bookstore.com/ontology.owl#tieneGenero"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.bookstore.com/ontology.owl#Genero"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.bookstore.com/ontology.owl#Libro"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.bookstore.com/ontology.owl#LibroFisico -->
 
     <owl:Class rdf:about="http://www.bookstore.com/ontology.owl#LibroFisico">
+        <rdfs:subClassOf rdf:resource="http://www.bookstore.com/ontology.owl#Libro"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.bookstore.com/ontology.owl#LibroPopular -->
+
+    <owl:Class rdf:about="http://www.bookstore.com/ontology.owl#LibroPopular">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.bookstore.com/ontology.owl#tienePrecio"/>
+                <owl:someValuesFrom>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:maxExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">20</xsd:maxExclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.bookstore.com/ontology.owl#Libro"/>
     </owl:Class>
     
@@ -232,6 +324,24 @@
     
 
 
+    <!-- http://www.bookstore.com/ontology.owl#EjemploLibroEspecifico -->
+
+    <owl:NamedIndividual rdf:about="http://www.bookstore.com/ontology.owl#EjemploLibroEspecifico">
+        <rdf:type rdf:resource="http://www.bookstore.com/ontology.owl#Ficcion"/>
+        <rdf:type rdf:resource="http://www.bookstore.com/ontology.owl#LibroEspecífico"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.bookstore.com/ontology.owl#LibroInconsistente -->
+
+    <owl:NamedIndividual rdf:about="http://www.bookstore.com/ontology.owl#LibroInconsistente">
+        <rdf:type rdf:resource="http://www.bookstore.com/ontology.owl#Ebook"/>
+        <rdf:type rdf:resource="http://www.bookstore.com/ontology.owl#Ficcion"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.bookstore.com/ontology.owl#Michael_Crichton -->
 
     <owl:NamedIndividual rdf:about="http://www.bookstore.com/ontology.owl#Michael_Crichton">
@@ -251,7 +361,10 @@
     <!-- http://www.bookstore.com/ontology.owl#Parque_Jurasico -->
 
     <owl:NamedIndividual rdf:about="http://www.bookstore.com/ontology.owl#Parque_Jurasico">
+        <rdf:type rdf:resource="http://www.bookstore.com/ontology.owl#CienciaFiccion"/>
+        <rdf:type rdf:resource="http://www.bookstore.com/ontology.owl#Fantasia"/>
         <rdf:type rdf:resource="http://www.bookstore.com/ontology.owl#Libro"/>
+        <rdf:type rdf:resource="http://www.bookstore.com/ontology.owl#LibroFisico"/>
         <ontology:escritoPor rdf:resource="http://www.bookstore.com/ontology.owl#Michael_Crichton"/>
         <ontology:publicadoPor rdf:resource="http://www.bookstore.com/ontology.owl#Orbis"/>
         <ontology:tieneAñoPublicacion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1990</ontology:tieneAñoPublicacion>
@@ -273,7 +386,6 @@
         <owl:members rdf:parseType="Collection">
             <rdf:Description rdf:about="http://www.bookstore.com/ontology.owl#Autor"/>
             <rdf:Description rdf:about="http://www.bookstore.com/ontology.owl#Editorial"/>
-            <rdf:Description rdf:about="http://www.bookstore.com/ontology.owl#Genero"/>
             <rdf:Description rdf:about="http://www.bookstore.com/ontology.owl#Libro"/>
         </owl:members>
     </rdf:Description>
