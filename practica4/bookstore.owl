@@ -213,7 +213,7 @@
                 <owl:intersectionOf rdf:parseType="Collection">
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://www.bookstore.com/ontology.owl#tieneGenero"/>
-                        <owl:someValuesFrom rdf:resource="http://www.bookstore.com/ontology.owl#CienciaFiccion"/>
+                        <owl:allValuesFrom rdf:resource="http://www.bookstore.com/ontology.owl#CienciaFiccion"/>
                     </owl:Restriction>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://www.bookstore.com/ontology.owl#tienePrecio"/>
@@ -336,6 +336,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.bookstore.com/ontology.owl#Biografia">
         <rdf:type rdf:resource="http://www.bookstore.com/ontology.owl#Biografia"/>
+        <rdf:type rdf:resource="http://www.bookstore.com/ontology.owl#Genero"/>
     </owl:NamedIndividual>
     
 
@@ -360,6 +361,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.bookstore.com/ontology.owl#CienciaFiccion">
         <rdf:type rdf:resource="http://www.bookstore.com/ontology.owl#CienciaFiccion"/>
+        <rdf:type rdf:resource="http://www.bookstore.com/ontology.owl#Genero"/>
     </owl:NamedIndividual>
     
 
@@ -405,6 +407,12 @@
         <ontology:tieneAñoPublicacion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1965</ontology:tieneAñoPublicacion>
         <ontology:tienePrecio rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4</ontology:tienePrecio>
     </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.bookstore.com/ontology.owl#Ebook -->
+
+    <owl:NamedIndividual rdf:about="http://www.bookstore.com/ontology.owl#Ebook"/>
     
 
 
@@ -499,6 +507,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.bookstore.com/ontology.owl#Fantasia">
         <rdf:type rdf:resource="http://www.bookstore.com/ontology.owl#Fantasia"/>
+        <rdf:type rdf:resource="http://www.bookstore.com/ontology.owl#Genero"/>
     </owl:NamedIndividual>
     
 
@@ -507,6 +516,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.bookstore.com/ontology.owl#Ficcion">
         <rdf:type rdf:resource="http://www.bookstore.com/ontology.owl#Ficcion"/>
+        <rdf:type rdf:resource="http://www.bookstore.com/ontology.owl#Genero"/>
     </owl:NamedIndividual>
     
 
@@ -570,6 +580,12 @@
     
 
 
+    <!-- http://www.bookstore.com/ontology.owl#LibroFisico -->
+
+    <owl:NamedIndividual rdf:about="http://www.bookstore.com/ontology.owl#LibroFisico"/>
+    
+
+
     <!-- http://www.bookstore.com/ontology.owl#LouisVuitton -->
 
     <owl:NamedIndividual rdf:about="http://www.bookstore.com/ontology.owl#LouisVuitton">
@@ -603,6 +619,7 @@
     <!-- http://www.bookstore.com/ontology.owl#Misterio -->
 
     <owl:NamedIndividual rdf:about="http://www.bookstore.com/ontology.owl#Misterio">
+        <rdf:type rdf:resource="http://www.bookstore.com/ontology.owl#Genero"/>
         <rdf:type rdf:resource="http://www.bookstore.com/ontology.owl#Misterio"/>
     </owl:NamedIndividual>
     
@@ -638,6 +655,7 @@
     <!-- http://www.bookstore.com/ontology.owl#NoFIccion -->
 
     <owl:NamedIndividual rdf:about="http://www.bookstore.com/ontology.owl#NoFIccion">
+        <rdf:type rdf:resource="http://www.bookstore.com/ontology.owl#Genero"/>
         <rdf:type rdf:resource="http://www.bookstore.com/ontology.owl#NoFiccion"/>
     </owl:NamedIndividual>
     
