@@ -213,7 +213,7 @@
                 <owl:intersectionOf rdf:parseType="Collection">
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://www.bookstore.com/ontology.owl#tieneGenero"/>
-                        <owl:allValuesFrom rdf:resource="http://www.bookstore.com/ontology.owl#CienciaFiccion"/>
+                        <owl:someValuesFrom rdf:resource="http://www.bookstore.com/ontology.owl#CienciaFiccion"/>
                     </owl:Restriction>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://www.bookstore.com/ontology.owl#tienePrecio"/>
@@ -305,6 +305,14 @@
     
 
 
+    <!-- http://www.bookstore.com/ontology.owl#Misterio -->
+
+    <owl:Class rdf:about="http://www.bookstore.com/ontology.owl#Misterio">
+        <rdfs:subClassOf rdf:resource="http://www.bookstore.com/ontology.owl#Genero"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.bookstore.com/ontology.owl#NoFiccion -->
 
     <owl:Class rdf:about="http://www.bookstore.com/ontology.owl#NoFiccion">
@@ -324,51 +332,425 @@
     
 
 
-    <!-- http://www.bookstore.com/ontology.owl#EjemploLibroEspecifico -->
+    <!-- http://www.bookstore.com/ontology.owl#Biografia -->
 
-    <owl:NamedIndividual rdf:about="http://www.bookstore.com/ontology.owl#EjemploLibroEspecifico">
-        <rdf:type rdf:resource="http://www.bookstore.com/ontology.owl#Ficcion"/>
-        <rdf:type rdf:resource="http://www.bookstore.com/ontology.owl#LibroEspecífico"/>
+    <owl:NamedIndividual rdf:about="http://www.bookstore.com/ontology.owl#Biografia">
+        <rdf:type rdf:resource="http://www.bookstore.com/ontology.owl#Biografia"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.bookstore.com/ontology.owl#LibroInconsistente -->
+    <!-- http://www.bookstore.com/ontology.owl#Booket -->
 
-    <owl:NamedIndividual rdf:about="http://www.bookstore.com/ontology.owl#LibroInconsistente">
-        <rdf:type rdf:resource="http://www.bookstore.com/ontology.owl#Ebook"/>
-        <rdf:type rdf:resource="http://www.bookstore.com/ontology.owl#Ficcion"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.bookstore.com/ontology.owl#Michael_Crichton -->
-
-    <owl:NamedIndividual rdf:about="http://www.bookstore.com/ontology.owl#Michael_Crichton">
-        <rdf:type rdf:resource="http://www.bookstore.com/ontology.owl#Autor"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.bookstore.com/ontology.owl#Orbis -->
-
-    <owl:NamedIndividual rdf:about="http://www.bookstore.com/ontology.owl#Orbis">
+    <owl:NamedIndividual rdf:about="http://www.bookstore.com/ontology.owl#Booket">
         <rdf:type rdf:resource="http://www.bookstore.com/ontology.owl#Editorial"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.bookstore.com/ontology.owl#Parque_Jurasico -->
+    <!-- http://www.bookstore.com/ontology.owl#CarlosFonseca -->
 
-    <owl:NamedIndividual rdf:about="http://www.bookstore.com/ontology.owl#Parque_Jurasico">
+    <owl:NamedIndividual rdf:about="http://www.bookstore.com/ontology.owl#CarlosFonseca">
+        <rdf:type rdf:resource="http://www.bookstore.com/ontology.owl#Autor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.bookstore.com/ontology.owl#CienciaFiccion -->
+
+    <owl:NamedIndividual rdf:about="http://www.bookstore.com/ontology.owl#CienciaFiccion">
         <rdf:type rdf:resource="http://www.bookstore.com/ontology.owl#CienciaFiccion"/>
-        <rdf:type rdf:resource="http://www.bookstore.com/ontology.owl#Fantasia"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.bookstore.com/ontology.owl#CirculoDeLectores -->
+
+    <owl:NamedIndividual rdf:about="http://www.bookstore.com/ontology.owl#CirculoDeLectores">
+        <rdf:type rdf:resource="http://www.bookstore.com/ontology.owl#Editorial"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.bookstore.com/ontology.owl#CixinLiu -->
+
+    <owl:NamedIndividual rdf:about="http://www.bookstore.com/ontology.owl#CixinLiu">
+        <rdf:type rdf:resource="http://www.bookstore.com/ontology.owl#Autor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.bookstore.com/ontology.owl#DeBolsillo -->
+
+    <owl:NamedIndividual rdf:about="http://www.bookstore.com/ontology.owl#DeBolsillo">
+        <rdf:type rdf:resource="http://www.bookstore.com/ontology.owl#Editorial"/>
+        <ontology:haPublicado rdf:resource="http://www.bookstore.com/ontology.owl#Dune"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.bookstore.com/ontology.owl#DonnaLeon -->
+
+    <owl:NamedIndividual rdf:about="http://www.bookstore.com/ontology.owl#DonnaLeon">
+        <rdf:type rdf:resource="http://www.bookstore.com/ontology.owl#Autor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.bookstore.com/ontology.owl#Dune -->
+
+    <owl:NamedIndividual rdf:about="http://www.bookstore.com/ontology.owl#Dune">
         <rdf:type rdf:resource="http://www.bookstore.com/ontology.owl#Libro"/>
-        <rdf:type rdf:resource="http://www.bookstore.com/ontology.owl#LibroFisico"/>
-        <ontology:escritoPor rdf:resource="http://www.bookstore.com/ontology.owl#Michael_Crichton"/>
-        <ontology:publicadoPor rdf:resource="http://www.bookstore.com/ontology.owl#Orbis"/>
+        <ontology:tieneGenero rdf:resource="http://www.bookstore.com/ontology.owl#CienciaFiccion"/>
+        <ontology:tieneAñoPublicacion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1965</ontology:tieneAñoPublicacion>
+        <ontology:tienePrecio rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4</ontology:tienePrecio>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.bookstore.com/ontology.owl#EdicionesOrbis -->
+
+    <owl:NamedIndividual rdf:about="http://www.bookstore.com/ontology.owl#EdicionesOrbis">
+        <rdf:type rdf:resource="http://www.bookstore.com/ontology.owl#Editorial"/>
+        <ontology:haPublicado rdf:resource="http://www.bookstore.com/ontology.owl#ParqueJurásico"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.bookstore.com/ontology.owl#ElBosqueDeLosPigmeos -->
+
+    <owl:NamedIndividual rdf:about="http://www.bookstore.com/ontology.owl#ElBosqueDeLosPigmeos">
+        <rdf:type rdf:resource="http://www.bookstore.com/ontology.owl#Libro"/>
+        <ontology:escritoPor rdf:resource="http://www.bookstore.com/ontology.owl#IsabelAllende"/>
+        <ontology:publicadoPor rdf:resource="http://www.bookstore.com/ontology.owl#CirculoDeLectores"/>
+        <ontology:tieneGenero rdf:resource="http://www.bookstore.com/ontology.owl#Fantasia"/>
+        <ontology:tieneAñoPublicacion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2004</ontology:tieneAñoPublicacion>
+        <ontology:tienePrecio rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">18</ontology:tienePrecio>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.bookstore.com/ontology.owl#ElDiamanteDeJerusalen -->
+
+    <owl:NamedIndividual rdf:about="http://www.bookstore.com/ontology.owl#ElDiamanteDeJerusalen">
+        <rdf:type rdf:resource="http://www.bookstore.com/ontology.owl#Libro"/>
+        <ontology:escritoPor rdf:resource="http://www.bookstore.com/ontology.owl#NoahGordon"/>
+        <ontology:publicadoPor rdf:resource="http://www.bookstore.com/ontology.owl#GrupoCorreo"/>
+        <ontology:tieneGenero rdf:resource="http://www.bookstore.com/ontology.owl#Ficcion"/>
+        <ontology:tieneAñoPublicacion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1979</ontology:tieneAñoPublicacion>
+        <ontology:tienePrecio rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">15</ontology:tienePrecio>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.bookstore.com/ontology.owl#ElDragonRojo -->
+
+    <owl:NamedIndividual rdf:about="http://www.bookstore.com/ontology.owl#ElDragonRojo">
+        <rdf:type rdf:resource="http://www.bookstore.com/ontology.owl#Libro"/>
+        <ontology:escritoPor rdf:resource="http://www.bookstore.com/ontology.owl#ThomasHarris"/>
+        <ontology:publicadoPor rdf:resource="http://www.bookstore.com/ontology.owl#CirculoDeLectores"/>
+        <ontology:tieneGenero rdf:resource="http://www.bookstore.com/ontology.owl#Ficcion"/>
+        <ontology:tieneAñoPublicacion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1981</ontology:tieneAñoPublicacion>
+        <ontology:tienePrecio rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">25</ontology:tienePrecio>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.bookstore.com/ontology.owl#ElProblemaDeLosTresCuerpos -->
+
+    <owl:NamedIndividual rdf:about="http://www.bookstore.com/ontology.owl#ElProblemaDeLosTresCuerpos">
+        <rdf:type rdf:resource="http://www.bookstore.com/ontology.owl#Libro"/>
+        <ontology:escritoPor rdf:resource="http://www.bookstore.com/ontology.owl#CixinLiu"/>
+        <ontology:publicadoPor rdf:resource="http://www.bookstore.com/ontology.owl#DeBolsillo"/>
+        <ontology:tieneGenero rdf:resource="http://www.bookstore.com/ontology.owl#CienciaFiccion"/>
+        <ontology:tieneAñoPublicacion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2006</ontology:tieneAñoPublicacion>
+        <ontology:tienePrecio rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">14.95</ontology:tienePrecio>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.bookstore.com/ontology.owl#ElRabino -->
+
+    <owl:NamedIndividual rdf:about="http://www.bookstore.com/ontology.owl#ElRabino">
+        <rdf:type rdf:resource="http://www.bookstore.com/ontology.owl#Libro"/>
+        <ontology:escritoPor rdf:resource="http://www.bookstore.com/ontology.owl#NoahGordon"/>
+        <ontology:publicadoPor rdf:resource="http://www.bookstore.com/ontology.owl#CirculoDeLectores"/>
+        <ontology:tieneGenero rdf:resource="http://www.bookstore.com/ontology.owl#Ficcion"/>
+        <ontology:tieneAñoPublicacion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1965</ontology:tieneAñoPublicacion>
+        <ontology:tienePrecio rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">21</ontology:tienePrecio>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.bookstore.com/ontology.owl#ElSilencioDeLosInocentes -->
+
+    <owl:NamedIndividual rdf:about="http://www.bookstore.com/ontology.owl#ElSilencioDeLosInocentes">
+        <rdf:type rdf:resource="http://www.bookstore.com/ontology.owl#Libro"/>
+        <ontology:escritoPor rdf:resource="http://www.bookstore.com/ontology.owl#ThomasHarris"/>
+        <ontology:publicadoPor rdf:resource="http://www.bookstore.com/ontology.owl#CirculoDeLectores"/>
+        <ontology:tieneGenero rdf:resource="http://www.bookstore.com/ontology.owl#Misterio"/>
+        <ontology:tieneAñoPublicacion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1988</ontology:tieneAñoPublicacion>
+        <ontology:tienePrecio rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">25</ontology:tienePrecio>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.bookstore.com/ontology.owl#Fantasia -->
+
+    <owl:NamedIndividual rdf:about="http://www.bookstore.com/ontology.owl#Fantasia">
+        <rdf:type rdf:resource="http://www.bookstore.com/ontology.owl#Fantasia"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.bookstore.com/ontology.owl#Ficcion -->
+
+    <owl:NamedIndividual rdf:about="http://www.bookstore.com/ontology.owl#Ficcion">
+        <rdf:type rdf:resource="http://www.bookstore.com/ontology.owl#Ficcion"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.bookstore.com/ontology.owl#FrankHerbert -->
+
+    <owl:NamedIndividual rdf:about="http://www.bookstore.com/ontology.owl#FrankHerbert">
+        <rdf:type rdf:resource="http://www.bookstore.com/ontology.owl#Autor"/>
+        <ontology:haEscrito rdf:resource="http://www.bookstore.com/ontology.owl#Dune"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.bookstore.com/ontology.owl#GrupoCorreo -->
+
+    <owl:NamedIndividual rdf:about="http://www.bookstore.com/ontology.owl#GrupoCorreo">
+        <rdf:type rdf:resource="http://www.bookstore.com/ontology.owl#Editorial"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.bookstore.com/ontology.owl#Hachette -->
+
+    <owl:NamedIndividual rdf:about="http://www.bookstore.com/ontology.owl#Hachette">
+        <rdf:type rdf:resource="http://www.bookstore.com/ontology.owl#Editorial"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.bookstore.com/ontology.owl#IsabelAllende -->
+
+    <owl:NamedIndividual rdf:about="http://www.bookstore.com/ontology.owl#IsabelAllende">
+        <rdf:type rdf:resource="http://www.bookstore.com/ontology.owl#Autor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.bookstore.com/ontology.owl#LaCiudadDeLasBestias -->
+
+    <owl:NamedIndividual rdf:about="http://www.bookstore.com/ontology.owl#LaCiudadDeLasBestias">
+        <rdf:type rdf:resource="http://www.bookstore.com/ontology.owl#Libro"/>
+        <ontology:escritoPor rdf:resource="http://www.bookstore.com/ontology.owl#IsabelAllende"/>
+        <ontology:publicadoPor rdf:resource="http://www.bookstore.com/ontology.owl#CirculoDeLectores"/>
+        <ontology:tieneGenero rdf:resource="http://www.bookstore.com/ontology.owl#Fantasia"/>
+        <ontology:tieneAñoPublicacion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2002</ontology:tieneAñoPublicacion>
+        <ontology:tienePrecio rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">19</ontology:tienePrecio>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.bookstore.com/ontology.owl#LaDoctoraCole -->
+
+    <owl:NamedIndividual rdf:about="http://www.bookstore.com/ontology.owl#LaDoctoraCole">
+        <rdf:type rdf:resource="http://www.bookstore.com/ontology.owl#Libro"/>
+        <ontology:escritoPor rdf:resource="http://www.bookstore.com/ontology.owl#NoahGordon"/>
+        <ontology:publicadoPor rdf:resource="http://www.bookstore.com/ontology.owl#CirculoDeLectores"/>
+        <ontology:tieneGenero rdf:resource="http://www.bookstore.com/ontology.owl#Ficcion"/>
+        <ontology:tieneAñoPublicacion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1995</ontology:tieneAñoPublicacion>
+        <ontology:tienePrecio rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">20</ontology:tienePrecio>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.bookstore.com/ontology.owl#LouisVuitton -->
+
+    <owl:NamedIndividual rdf:about="http://www.bookstore.com/ontology.owl#LouisVuitton">
+        <rdf:type rdf:resource="http://www.bookstore.com/ontology.owl#Libro"/>
+        <ontology:escritoPor rdf:resource="http://www.bookstore.com/ontology.owl#PierreLeonforte"/>
+        <ontology:publicadoPor rdf:resource="http://www.bookstore.com/ontology.owl#Hachette"/>
+        <ontology:tieneGenero rdf:resource="http://www.bookstore.com/ontology.owl#NoFIccion"/>
+        <ontology:tieneAñoPublicacion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2012</ontology:tieneAñoPublicacion>
+        <ontology:tienePrecio rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">126.90</ontology:tienePrecio>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.bookstore.com/ontology.owl#MichaelCrichton -->
+
+    <owl:NamedIndividual rdf:about="http://www.bookstore.com/ontology.owl#MichaelCrichton">
+        <rdf:type rdf:resource="http://www.bookstore.com/ontology.owl#Autor"/>
+        <ontology:haEscrito rdf:resource="http://www.bookstore.com/ontology.owl#ParqueJurásico"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.bookstore.com/ontology.owl#Minotauro -->
+
+    <owl:NamedIndividual rdf:about="http://www.bookstore.com/ontology.owl#Minotauro">
+        <rdf:type rdf:resource="http://www.bookstore.com/ontology.owl#Editorial"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.bookstore.com/ontology.owl#Misterio -->
+
+    <owl:NamedIndividual rdf:about="http://www.bookstore.com/ontology.owl#Misterio">
+        <rdf:type rdf:resource="http://www.bookstore.com/ontology.owl#Misterio"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.bookstore.com/ontology.owl#MuerteEnLaFenice -->
+
+    <owl:NamedIndividual rdf:about="http://www.bookstore.com/ontology.owl#MuerteEnLaFenice">
+        <rdf:type rdf:resource="http://www.bookstore.com/ontology.owl#Libro"/>
+        <ontology:escritoPor rdf:resource="http://www.bookstore.com/ontology.owl#DonnaLeon"/>
+        <ontology:publicadoPor rdf:resource="http://www.bookstore.com/ontology.owl#CirculoDeLectores"/>
+        <ontology:tieneGenero rdf:resource="http://www.bookstore.com/ontology.owl#Misterio"/>
+        <ontology:tieneAñoPublicacion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1993</ontology:tieneAñoPublicacion>
+        <ontology:tienePrecio rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">20</ontology:tienePrecio>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.bookstore.com/ontology.owl#Neuromante -->
+
+    <owl:NamedIndividual rdf:about="http://www.bookstore.com/ontology.owl#Neuromante">
+        <rdf:type rdf:resource="http://www.bookstore.com/ontology.owl#Libro"/>
+        <ontology:escritoPor rdf:resource="http://www.bookstore.com/ontology.owl#WilliamGibson"/>
+        <ontology:publicadoPor rdf:resource="http://www.bookstore.com/ontology.owl#Minotauro"/>
+        <ontology:tieneGenero rdf:resource="http://www.bookstore.com/ontology.owl#CienciaFiccion"/>
+        <ontology:tieneGenero rdf:resource="http://www.bookstore.com/ontology.owl#Fantasia"/>
+        <ontology:tieneAñoPublicacion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1984</ontology:tieneAñoPublicacion>
+        <ontology:tienePrecio rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">15.95</ontology:tienePrecio>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.bookstore.com/ontology.owl#NoFIccion -->
+
+    <owl:NamedIndividual rdf:about="http://www.bookstore.com/ontology.owl#NoFIccion">
+        <rdf:type rdf:resource="http://www.bookstore.com/ontology.owl#NoFiccion"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.bookstore.com/ontology.owl#NoahGordon -->
+
+    <owl:NamedIndividual rdf:about="http://www.bookstore.com/ontology.owl#NoahGordon">
+        <rdf:type rdf:resource="http://www.bookstore.com/ontology.owl#Autor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.bookstore.com/ontology.owl#ParqueJurásico -->
+
+    <owl:NamedIndividual rdf:about="http://www.bookstore.com/ontology.owl#ParqueJurásico">
+        <rdf:type rdf:resource="http://www.bookstore.com/ontology.owl#Libro"/>
+        <ontology:tieneGenero rdf:resource="http://www.bookstore.com/ontology.owl#CienciaFiccion"/>
+        <ontology:tieneGenero rdf:resource="http://www.bookstore.com/ontology.owl#Fantasia"/>
         <ontology:tieneAñoPublicacion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1990</ontology:tieneAñoPublicacion>
         <ontology:tienePrecio rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4</ontology:tienePrecio>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.bookstore.com/ontology.owl#Patrimonio -->
+
+    <owl:NamedIndividual rdf:about="http://www.bookstore.com/ontology.owl#Patrimonio">
+        <rdf:type rdf:resource="http://www.bookstore.com/ontology.owl#Libro"/>
+        <ontology:escritoPor rdf:resource="http://www.bookstore.com/ontology.owl#PhilipRoth"/>
+        <ontology:publicadoPor rdf:resource="http://www.bookstore.com/ontology.owl#DeBolsillo"/>
+        <ontology:tieneGenero rdf:resource="http://www.bookstore.com/ontology.owl#Biografia"/>
+        <ontology:tieneAñoPublicacion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2011</ontology:tieneAñoPublicacion>
+        <ontology:tienePrecio rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.95</ontology:tienePrecio>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.bookstore.com/ontology.owl#PhilipRoth -->
+
+    <owl:NamedIndividual rdf:about="http://www.bookstore.com/ontology.owl#PhilipRoth">
+        <rdf:type rdf:resource="http://www.bookstore.com/ontology.owl#Autor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.bookstore.com/ontology.owl#PierreLeonforte -->
+
+    <owl:NamedIndividual rdf:about="http://www.bookstore.com/ontology.owl#PierreLeonforte">
+        <rdf:type rdf:resource="http://www.bookstore.com/ontology.owl#Autor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.bookstore.com/ontology.owl#PrimaveraSilenciosa -->
+
+    <owl:NamedIndividual rdf:about="http://www.bookstore.com/ontology.owl#PrimaveraSilenciosa">
+        <rdf:type rdf:resource="http://www.bookstore.com/ontology.owl#Libro"/>
+        <ontology:escritoPor rdf:resource="http://www.bookstore.com/ontology.owl#RachelCarson"/>
+        <ontology:publicadoPor rdf:resource="http://www.bookstore.com/ontology.owl#Booket"/>
+        <ontology:tieneGenero rdf:resource="http://www.bookstore.com/ontology.owl#NoFIccion"/>
+        <ontology:tieneAñoPublicacion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1962</ontology:tieneAñoPublicacion>
+        <ontology:tienePrecio rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">12</ontology:tienePrecio>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.bookstore.com/ontology.owl#RachelCarson -->
+
+    <owl:NamedIndividual rdf:about="http://www.bookstore.com/ontology.owl#RachelCarson">
+        <rdf:type rdf:resource="http://www.bookstore.com/ontology.owl#Autor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.bookstore.com/ontology.owl#ThomasHarris -->
+
+    <owl:NamedIndividual rdf:about="http://www.bookstore.com/ontology.owl#ThomasHarris">
+        <rdf:type rdf:resource="http://www.bookstore.com/ontology.owl#Autor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.bookstore.com/ontology.owl#TreceRosasRojas -->
+
+    <owl:NamedIndividual rdf:about="http://www.bookstore.com/ontology.owl#TreceRosasRojas">
+        <rdf:type rdf:resource="http://www.bookstore.com/ontology.owl#Libro"/>
+        <ontology:escritoPor rdf:resource="http://www.bookstore.com/ontology.owl#CarlosFonseca"/>
+        <ontology:publicadoPor rdf:resource="http://www.bookstore.com/ontology.owl#Booket"/>
+        <ontology:tieneGenero rdf:resource="http://www.bookstore.com/ontology.owl#NoFIccion"/>
+        <ontology:tieneAñoPublicacion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2005</ontology:tieneAñoPublicacion>
+        <ontology:tienePrecio rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5</ontology:tienePrecio>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.bookstore.com/ontology.owl#VenenoDeCristal -->
+
+    <owl:NamedIndividual rdf:about="http://www.bookstore.com/ontology.owl#VenenoDeCristal">
+        <rdf:type rdf:resource="http://www.bookstore.com/ontology.owl#Libro"/>
+        <ontology:escritoPor rdf:resource="http://www.bookstore.com/ontology.owl#DonnaLeon"/>
+        <ontology:publicadoPor rdf:resource="http://www.bookstore.com/ontology.owl#CirculoDeLectores"/>
+        <ontology:tieneGenero rdf:resource="http://www.bookstore.com/ontology.owl#Misterio"/>
+        <ontology:tieneAñoPublicacion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2006</ontology:tieneAñoPublicacion>
+        <ontology:tienePrecio rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">25</ontology:tienePrecio>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.bookstore.com/ontology.owl#WilliamGibson -->
+
+    <owl:NamedIndividual rdf:about="http://www.bookstore.com/ontology.owl#WilliamGibson">
+        <rdf:type rdf:resource="http://www.bookstore.com/ontology.owl#Autor"/>
     </owl:NamedIndividual>
     
 
