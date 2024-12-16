@@ -10,7 +10,10 @@
      xmlns:bookstore="http://www.bookstore.com/ontology/bookstore#">
     <owl:Ontology rdf:about="http://www.bookstore.com/ontology/bookstore">
         <owl:versionIRI rdf:resource="http://www.bookstore.com/ontology/bookstore/1.0.0"/>
-        <rdfs:comment xml:lang="es">Esta ontología describe una estructura básica para una librería.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Esta ontología describe una estructura básica de libros.
+Contiene una jerarquía de clases, y propiedades para objetos y datos.
+
+Creado por: Pablo Valenzuela Álvarez.</rdfs:comment>
     </owl:Ontology>
     
 
@@ -857,6 +860,15 @@
     
 
 
+    <!-- http://www.bookstore.com/ontology/bookstore#libroInconsistente -->
+
+    <owl:NamedIndividual rdf:about="http://www.bookstore.com/ontology/bookstore#libroInconsistente">
+        <rdf:type rdf:resource="http://www.bookstore.com/ontology/bookstore#Ficcion"/>
+        <rdf:type rdf:resource="http://www.bookstore.com/ontology/bookstore#Libro"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -871,7 +883,6 @@
             <rdf:Description rdf:about="http://www.bookstore.com/ontology/bookstore#Autor"/>
             <rdf:Description rdf:about="http://www.bookstore.com/ontology/bookstore#Coleccion"/>
             <rdf:Description rdf:about="http://www.bookstore.com/ontology/bookstore#Editorial"/>
-            <rdf:Description rdf:about="http://www.bookstore.com/ontology/bookstore#Genero"/>
             <rdf:Description rdf:about="http://www.bookstore.com/ontology/bookstore#Libro"/>
         </owl:members>
     </rdf:Description>
