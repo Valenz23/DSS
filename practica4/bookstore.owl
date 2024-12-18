@@ -296,7 +296,7 @@ Creado por: Pablo Valenzuela Álvarez.</rdfs:comment>
         <owl:equivalentClass>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.bookstore.com/ontology/bookstore#tieneGenero"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minQualifiedCardinality>
                 <owl:onClass rdf:resource="http://www.bookstore.com/ontology/bookstore#Genero"/>
             </owl:Restriction>
         </owl:equivalentClass>
@@ -862,6 +862,16 @@ Creado por: Pablo Valenzuela Álvarez.</rdfs:comment>
     <owl:NamedIndividual rdf:about="http://www.bookstore.com/ontology/bookstore#libroInconsistente">
         <rdf:type rdf:resource="http://www.bookstore.com/ontology/bookstore#Ficcion"/>
         <rdf:type rdf:resource="http://www.bookstore.com/ontology/bookstore#Libro"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.bookstore.com/ontology/bookstore#pruebaLibrencio -->
+
+    <owl:NamedIndividual rdf:about="http://www.bookstore.com/ontology/bookstore#pruebaLibrencio">
+        <rdf:type rdf:resource="http://www.bookstore.com/ontology/bookstore#Libro"/>
+        <bookstore:tieneGenero rdf:resource="http://www.bookstore.com/ontology/bookstore#Biografia"/>
+        <bookstore:tieneGenero rdf:resource="http://www.bookstore.com/ontology/bookstore#Fantasia"/>
     </owl:NamedIndividual>
     
 
