@@ -207,7 +207,6 @@ Creado por: Pablo Valenzuela Álvarez.</rdfs:comment>
 
     <owl:Class rdf:about="http://www.bookstore.com/ontology/bookstore#Ficcion">
         <rdfs:subClassOf rdf:resource="http://www.bookstore.com/ontology/bookstore#Genero"/>
-        <owl:disjointWith rdf:resource="http://www.bookstore.com/ontology/bookstore#NoFiccion"/>
     </owl:Class>
     
 
@@ -368,7 +367,6 @@ Creado por: Pablo Valenzuela Álvarez.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="http://www.bookstore.com/ontology/bookstore#Biografia">
         <rdf:type rdf:resource="http://www.bookstore.com/ontology/bookstore#Biografia"/>
-        <rdf:type rdf:resource="http://www.bookstore.com/ontology/bookstore#Genero"/>
     </owl:NamedIndividual>
     
 
@@ -393,7 +391,6 @@ Creado por: Pablo Valenzuela Álvarez.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="http://www.bookstore.com/ontology/bookstore#CienciaFiccion">
         <rdf:type rdf:resource="http://www.bookstore.com/ontology/bookstore#CienciaFiccion"/>
-        <rdf:type rdf:resource="http://www.bookstore.com/ontology/bookstore#Genero"/>
     </owl:NamedIndividual>
     
 
@@ -556,7 +553,6 @@ Creado por: Pablo Valenzuela Álvarez.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="http://www.bookstore.com/ontology/bookstore#Fantasia">
         <rdf:type rdf:resource="http://www.bookstore.com/ontology/bookstore#Fantasia"/>
-        <rdf:type rdf:resource="http://www.bookstore.com/ontology/bookstore#Genero"/>
     </owl:NamedIndividual>
     
 
@@ -565,7 +561,6 @@ Creado por: Pablo Valenzuela Álvarez.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="http://www.bookstore.com/ontology/bookstore#Ficcion">
         <rdf:type rdf:resource="http://www.bookstore.com/ontology/bookstore#Ficcion"/>
-        <rdf:type rdf:resource="http://www.bookstore.com/ontology/bookstore#Genero"/>
     </owl:NamedIndividual>
     
 
@@ -698,7 +693,6 @@ Creado por: Pablo Valenzuela Álvarez.</rdfs:comment>
     <!-- http://www.bookstore.com/ontology/bookstore#Misterio -->
 
     <owl:NamedIndividual rdf:about="http://www.bookstore.com/ontology/bookstore#Misterio">
-        <rdf:type rdf:resource="http://www.bookstore.com/ontology/bookstore#Genero"/>
         <rdf:type rdf:resource="http://www.bookstore.com/ontology/bookstore#Misterio"/>
     </owl:NamedIndividual>
     
@@ -724,7 +718,6 @@ Creado por: Pablo Valenzuela Álvarez.</rdfs:comment>
         <bookstore:escritoPor rdf:resource="http://www.bookstore.com/ontology/bookstore#WilliamGibson"/>
         <bookstore:publicadoPor rdf:resource="http://www.bookstore.com/ontology/bookstore#Minotauro"/>
         <bookstore:tieneGenero rdf:resource="http://www.bookstore.com/ontology/bookstore#CienciaFiccion"/>
-        <bookstore:tieneGenero rdf:resource="http://www.bookstore.com/ontology/bookstore#Fantasia"/>
         <bookstore:tieneAñoPublicacion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1984</bookstore:tieneAñoPublicacion>
         <bookstore:tienePrecio rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">15.95</bookstore:tienePrecio>
     </owl:NamedIndividual>
@@ -734,7 +727,6 @@ Creado por: Pablo Valenzuela Álvarez.</rdfs:comment>
     <!-- http://www.bookstore.com/ontology/bookstore#NoFIccion -->
 
     <owl:NamedIndividual rdf:about="http://www.bookstore.com/ontology/bookstore#NoFIccion">
-        <rdf:type rdf:resource="http://www.bookstore.com/ontology/bookstore#Genero"/>
         <rdf:type rdf:resource="http://www.bookstore.com/ontology/bookstore#NoFiccion"/>
     </owl:NamedIndividual>
     
@@ -753,7 +745,6 @@ Creado por: Pablo Valenzuela Álvarez.</rdfs:comment>
     <owl:NamedIndividual rdf:about="http://www.bookstore.com/ontology/bookstore#ParqueJurásico">
         <rdf:type rdf:resource="http://www.bookstore.com/ontology/bookstore#LibroFisico"/>
         <bookstore:tieneGenero rdf:resource="http://www.bookstore.com/ontology/bookstore#CienciaFiccion"/>
-        <bookstore:tieneGenero rdf:resource="http://www.bookstore.com/ontology/bookstore#Fantasia"/>
         <bookstore:tieneAñoPublicacion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1990</bookstore:tieneAñoPublicacion>
         <bookstore:tienePrecio rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4</bookstore:tienePrecio>
     </owl:NamedIndividual>
@@ -860,15 +851,6 @@ Creado por: Pablo Valenzuela Álvarez.</rdfs:comment>
     
 
 
-    <!-- http://www.bookstore.com/ontology/bookstore#libroInconsistente -->
-
-    <owl:NamedIndividual rdf:about="http://www.bookstore.com/ontology/bookstore#libroInconsistente">
-        <rdf:type rdf:resource="http://www.bookstore.com/ontology/bookstore#Ficcion"/>
-        <rdf:type rdf:resource="http://www.bookstore.com/ontology/bookstore#Libro"/>
-    </owl:NamedIndividual>
-    
-
-
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -883,7 +865,19 @@ Creado por: Pablo Valenzuela Álvarez.</rdfs:comment>
             <rdf:Description rdf:about="http://www.bookstore.com/ontology/bookstore#Autor"/>
             <rdf:Description rdf:about="http://www.bookstore.com/ontology/bookstore#Coleccion"/>
             <rdf:Description rdf:about="http://www.bookstore.com/ontology/bookstore#Editorial"/>
+            <rdf:Description rdf:about="http://www.bookstore.com/ontology/bookstore#Genero"/>
             <rdf:Description rdf:about="http://www.bookstore.com/ontology/bookstore#Libro"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.bookstore.com/ontology/bookstore#Biografia"/>
+            <rdf:Description rdf:about="http://www.bookstore.com/ontology/bookstore#CienciaFiccion"/>
+            <rdf:Description rdf:about="http://www.bookstore.com/ontology/bookstore#Fantasia"/>
+            <rdf:Description rdf:about="http://www.bookstore.com/ontology/bookstore#Ficcion"/>
+            <rdf:Description rdf:about="http://www.bookstore.com/ontology/bookstore#Misterio"/>
+            <rdf:Description rdf:about="http://www.bookstore.com/ontology/bookstore#NoFiccion"/>
         </owl:members>
     </rdf:Description>
 </rdf:RDF>
