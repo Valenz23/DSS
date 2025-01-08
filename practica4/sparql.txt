@@ -1,0 +1,33 @@
+Q1:
+
+PREFIX ex: <http://www.bookstore.com/ontology/bookstore#>
+SELECT ?lector WHERE {
+  ?libro ex:tieneGenero ex:CienciaFiccion .
+  ?lector ex:haComprado ?libro .
+}
+
+Q2:
+
+PREFIX ex: <http://www.bookstore.com/ontology/bookstore#>
+SELECT ?titulo WHERE { 
+  ?libro ex:tieneGenero ex:NoFIccion .
+  ?libro ex:tieneTitulo ?titulo
+}
+
+Q3:
+
+PREFIX ex: <http://www.bookstore.com/ontology/bookstore#>
+SELECT ?titulo ?valoracion
+WHERE {
+?libro ex:tieneTitulo ?titulo .
+?libro ex:tieneValoracion ?valoracion
+}
+
+Q4: 
+PREFIX ex: <http://www.bookstore.com/ontology/bookstore#>
+SELECT ?titulo
+WHERE {
+?libro ex:tieneTitulo ?titulo .
+?libro ex:tieneValoracion 4 . 
+}
+
