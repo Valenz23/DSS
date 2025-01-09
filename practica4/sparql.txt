@@ -1,9 +1,10 @@
 Q1:
 
 PREFIX ex: <http://www.bookstore.com/ontology/bookstore#>
-SELECT ?lector WHERE {
+SELECT ?lector ?titulo WHERE {
   ?libro ex:tieneGenero ex:CienciaFiccion .
   ?lector ex:haComprado ?libro .
+  ?libro ex:tieneTitulo ?titulo .
 }
 
 Q2:
@@ -11,23 +12,42 @@ Q2:
 PREFIX ex: <http://www.bookstore.com/ontology/bookstore#>
 SELECT ?titulo WHERE { 
   ?libro ex:tieneGenero ex:NoFIccion .
-  ?libro ex:tieneTitulo ?titulo
+  ?libro ex:tieneTitulo ?titulo .
 }
 
 Q3:
 
 PREFIX ex: <http://www.bookstore.com/ontology/bookstore#>
-SELECT ?titulo ?valoracion
-WHERE {
-?libro ex:tieneTitulo ?titulo .
-?libro ex:tieneValoracion ?valoracion
+SELECT ?titulo ?valoracion WHERE {
+  ?libro ex:tieneTitulo ?titulo .
+  ?libro ex:tieneValoracion ?valoracion .
+  ?libro ex:tieneValoracion 4 .
 }
 
 Q4: 
+
 PREFIX ex: <http://www.bookstore.com/ontology/bookstore#>
-SELECT ?titulo
-WHERE {
-?libro ex:tieneTitulo ?titulo .
-?libro ex:tieneValoracion 4 . 
+SELECT ?lector ?titulo WHERE { 
+  ?lector ex:haComprado ?libro .
+  ?libro ex:tieneTitulo ?titulo .
 }
+
+Q5:
+
+PREFIX ex: <http://www.bookstore.com/ontology/bookstore#>
+SELECT (COUNT(?libro) AS ?totalLibrosComprados) WHERE { 
+  ?lector ex:haComprado ?libro .
+}
+
+Q6:
+
+PREFIX ex: <http://www.bookstore.com/ontology/bookstore#>
+SELECT ?lector (SUM(?precio) AS ?sumaPrecios) WHERE { 
+  ?lector ex:haComprado ?libro .
+  ?libro ex:tienePrecio ?precio .
+}
+GROUP BY ?lector
+
+
+
 

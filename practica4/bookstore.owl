@@ -503,6 +503,8 @@ Creado por: Pablo Valenzuela Álvarez.</rdfs:comment>
         <bookstore:tieneGenero rdf:resource="http://www.bookstore.com/ontology/bookstore#Fantasia"/>
         <bookstore:tieneAñoPublicacion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2004</bookstore:tieneAñoPublicacion>
         <bookstore:tienePrecio rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">18</bookstore:tienePrecio>
+        <bookstore:tieneTitulo>El Bosque de los Pigmeos</bookstore:tieneTitulo>
+        <bookstore:tieneValoracion rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</bookstore:tieneValoracion>
     </owl:NamedIndividual>
     
 
@@ -516,6 +518,8 @@ Creado por: Pablo Valenzuela Álvarez.</rdfs:comment>
         <bookstore:tieneGenero rdf:resource="http://www.bookstore.com/ontology/bookstore#Ficcion"/>
         <bookstore:tieneAñoPublicacion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1979</bookstore:tieneAñoPublicacion>
         <bookstore:tienePrecio rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">15</bookstore:tienePrecio>
+        <bookstore:tieneTitulo>El Diamante de Jerusalén</bookstore:tieneTitulo>
+        <bookstore:tieneValoracion rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</bookstore:tieneValoracion>
     </owl:NamedIndividual>
     
 
@@ -529,6 +533,8 @@ Creado por: Pablo Valenzuela Álvarez.</rdfs:comment>
         <bookstore:tieneGenero rdf:resource="http://www.bookstore.com/ontology/bookstore#Ficcion"/>
         <bookstore:tieneAñoPublicacion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1981</bookstore:tieneAñoPublicacion>
         <bookstore:tienePrecio rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">6</bookstore:tienePrecio>
+        <bookstore:tieneTitulo>El Dragón Rojo</bookstore:tieneTitulo>
+        <bookstore:tieneValoracion rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</bookstore:tieneValoracion>
     </owl:NamedIndividual>
     
 
@@ -543,6 +549,8 @@ Creado por: Pablo Valenzuela Álvarez.</rdfs:comment>
         <bookstore:tieneGenero rdf:resource="http://www.bookstore.com/ontology/bookstore#CienciaFiccion"/>
         <bookstore:tieneAñoPublicacion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2006</bookstore:tieneAñoPublicacion>
         <bookstore:tienePrecio rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">14.95</bookstore:tienePrecio>
+        <bookstore:tieneTitulo>El Problema de los Tres Cuerpos</bookstore:tieneTitulo>
+        <bookstore:tieneValoracion rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</bookstore:tieneValoracion>
     </owl:NamedIndividual>
     
 
@@ -556,6 +564,8 @@ Creado por: Pablo Valenzuela Álvarez.</rdfs:comment>
         <bookstore:tieneGenero rdf:resource="http://www.bookstore.com/ontology/bookstore#Ficcion"/>
         <bookstore:tieneAñoPublicacion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1965</bookstore:tieneAñoPublicacion>
         <bookstore:tienePrecio rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">55</bookstore:tienePrecio>
+        <bookstore:tieneTitulo>El Rabino</bookstore:tieneTitulo>
+        <bookstore:tieneValoracion rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</bookstore:tieneValoracion>
     </owl:NamedIndividual>
     
 
@@ -570,6 +580,8 @@ Creado por: Pablo Valenzuela Álvarez.</rdfs:comment>
         <bookstore:tieneGenero rdf:resource="http://www.bookstore.com/ontology/bookstore#Fantasia"/>
         <bookstore:tieneAñoPublicacion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1954</bookstore:tieneAñoPublicacion>
         <bookstore:tienePrecio rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">7.59</bookstore:tienePrecio>
+        <bookstore:tieneTitulo>El Retorno del Rey</bookstore:tieneTitulo>
+        <bookstore:tieneValoracion rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</bookstore:tieneValoracion>
     </owl:NamedIndividual>
     
 
@@ -591,6 +603,8 @@ Creado por: Pablo Valenzuela Álvarez.</rdfs:comment>
         <bookstore:tieneGenero rdf:resource="http://www.bookstore.com/ontology/bookstore#Misterio"/>
         <bookstore:tieneAñoPublicacion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1988</bookstore:tieneAñoPublicacion>
         <bookstore:tienePrecio rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">7</bookstore:tienePrecio>
+        <bookstore:tieneTitulo>El Silencio de los Inocentes</bookstore:tieneTitulo>
+        <bookstore:tieneValoracion rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</bookstore:tieneValoracion>
     </owl:NamedIndividual>
     
 
@@ -657,6 +671,8 @@ Creado por: Pablo Valenzuela Álvarez.</rdfs:comment>
     <owl:NamedIndividual rdf:about="http://www.bookstore.com/ontology/bookstore#Jonsi">
         <rdf:type rdf:resource="http://www.bookstore.com/ontology/bookstore#Lector"/>
         <bookstore:haComprado rdf:resource="http://www.bookstore.com/ontology/bookstore#Dune"/>
+        <bookstore:haComprado rdf:resource="http://www.bookstore.com/ontology/bookstore#ElDragonRojo"/>
+        <bookstore:haComprado rdf:resource="http://www.bookstore.com/ontology/bookstore#MuerteEnLaFenice"/>
     </owl:NamedIndividual>
     
 
@@ -670,6 +686,8 @@ Creado por: Pablo Valenzuela Álvarez.</rdfs:comment>
         <bookstore:tieneGenero rdf:resource="http://www.bookstore.com/ontology/bookstore#Fantasia"/>
         <bookstore:tieneAñoPublicacion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2002</bookstore:tieneAñoPublicacion>
         <bookstore:tienePrecio rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">19</bookstore:tienePrecio>
+        <bookstore:tieneTitulo>La Ciudad de las Bestias</bookstore:tieneTitulo>
+        <bookstore:tieneValoracion rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</bookstore:tieneValoracion>
     </owl:NamedIndividual>
     
 
@@ -684,6 +702,8 @@ Creado por: Pablo Valenzuela Álvarez.</rdfs:comment>
         <bookstore:tieneGenero rdf:resource="http://www.bookstore.com/ontology/bookstore#Fantasia"/>
         <bookstore:tieneAñoPublicacion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1954</bookstore:tieneAñoPublicacion>
         <bookstore:tienePrecio rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">7.59</bookstore:tienePrecio>
+        <bookstore:tieneTitulo>La Comunidad del Anillo</bookstore:tieneTitulo>
+        <bookstore:tieneValoracion rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</bookstore:tieneValoracion>
     </owl:NamedIndividual>
     
 
@@ -697,6 +717,8 @@ Creado por: Pablo Valenzuela Álvarez.</rdfs:comment>
         <bookstore:tieneGenero rdf:resource="http://www.bookstore.com/ontology/bookstore#Ficcion"/>
         <bookstore:tieneAñoPublicacion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1995</bookstore:tieneAñoPublicacion>
         <bookstore:tienePrecio rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">20</bookstore:tienePrecio>
+        <bookstore:tieneTitulo>La Doctora Cole</bookstore:tieneTitulo>
+        <bookstore:tieneValoracion rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</bookstore:tieneValoracion>
     </owl:NamedIndividual>
     
 
@@ -711,6 +733,8 @@ Creado por: Pablo Valenzuela Álvarez.</rdfs:comment>
         <bookstore:tieneGenero rdf:resource="http://www.bookstore.com/ontology/bookstore#Fantasia"/>
         <bookstore:tieneAñoPublicacion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1954</bookstore:tieneAñoPublicacion>
         <bookstore:tienePrecio rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">7.59</bookstore:tienePrecio>
+        <bookstore:tieneTitulo>Las Dos Torres</bookstore:tieneTitulo>
+        <bookstore:tieneValoracion rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</bookstore:tieneValoracion>
     </owl:NamedIndividual>
     
 
@@ -734,7 +758,9 @@ Creado por: Pablo Valenzuela Álvarez.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="http://www.bookstore.com/ontology/bookstore#Marina">
         <rdf:type rdf:resource="http://www.bookstore.com/ontology/bookstore#Lector"/>
+        <bookstore:haComprado rdf:resource="http://www.bookstore.com/ontology/bookstore#ElBosqueDeLosPigmeos"/>
         <bookstore:haComprado rdf:resource="http://www.bookstore.com/ontology/bookstore#ElProblemaDeLosTresCuerpos"/>
+        <bookstore:haComprado rdf:resource="http://www.bookstore.com/ontology/bookstore#VenenoDeCristal"/>
     </owl:NamedIndividual>
     
 
@@ -773,6 +799,8 @@ Creado por: Pablo Valenzuela Álvarez.</rdfs:comment>
         <bookstore:tieneGenero rdf:resource="http://www.bookstore.com/ontology/bookstore#Misterio"/>
         <bookstore:tieneAñoPublicacion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1993</bookstore:tieneAñoPublicacion>
         <bookstore:tienePrecio rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8</bookstore:tienePrecio>
+        <bookstore:tieneTitulo>Muerte en la Fenice</bookstore:tieneTitulo>
+        <bookstore:tieneValoracion rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</bookstore:tieneValoracion>
     </owl:NamedIndividual>
     
 
@@ -830,6 +858,8 @@ Creado por: Pablo Valenzuela Álvarez.</rdfs:comment>
         <bookstore:tieneGenero rdf:resource="http://www.bookstore.com/ontology/bookstore#Biografia"/>
         <bookstore:tieneAñoPublicacion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2011</bookstore:tieneAñoPublicacion>
         <bookstore:tienePrecio rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.95</bookstore:tienePrecio>
+        <bookstore:tieneTitulo>Patrimonio</bookstore:tieneTitulo>
+        <bookstore:tieneValoracion rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</bookstore:tieneValoracion>
     </owl:NamedIndividual>
     
 
@@ -838,6 +868,9 @@ Creado por: Pablo Valenzuela Álvarez.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="http://www.bookstore.com/ontology/bookstore#Pepe">
         <rdf:type rdf:resource="http://www.bookstore.com/ontology/bookstore#Lector"/>
+        <bookstore:haComprado rdf:resource="http://www.bookstore.com/ontology/bookstore#ElDiamanteDeJerusalen"/>
+        <bookstore:haComprado rdf:resource="http://www.bookstore.com/ontology/bookstore#ElRabino"/>
+        <bookstore:haComprado rdf:resource="http://www.bookstore.com/ontology/bookstore#PrimaveraSilenciosa"/>
     </owl:NamedIndividual>
     
 
@@ -868,6 +901,7 @@ Creado por: Pablo Valenzuela Álvarez.</rdfs:comment>
         <bookstore:tieneAñoPublicacion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1962</bookstore:tieneAñoPublicacion>
         <bookstore:tienePrecio rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">12</bookstore:tienePrecio>
         <bookstore:tieneTitulo>Primavera Silenciosa</bookstore:tieneTitulo>
+        <bookstore:tieneValoracion rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</bookstore:tieneValoracion>
     </owl:NamedIndividual>
     
 
@@ -884,6 +918,9 @@ Creado por: Pablo Valenzuela Álvarez.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="http://www.bookstore.com/ontology/bookstore#Sarunas">
         <rdf:type rdf:resource="http://www.bookstore.com/ontology/bookstore#Lector"/>
+        <bookstore:haComprado rdf:resource="http://www.bookstore.com/ontology/bookstore#ElBosqueDeLosPigmeos"/>
+        <bookstore:haComprado rdf:resource="http://www.bookstore.com/ontology/bookstore#LaCiudadDeLasBestias"/>
+        <bookstore:haComprado rdf:resource="http://www.bookstore.com/ontology/bookstore#LaDoctoraCole"/>
     </owl:NamedIndividual>
     
 
@@ -906,6 +943,7 @@ Creado por: Pablo Valenzuela Álvarez.</rdfs:comment>
         <bookstore:tieneAñoPublicacion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2005</bookstore:tieneAñoPublicacion>
         <bookstore:tienePrecio rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5</bookstore:tienePrecio>
         <bookstore:tieneTitulo>Trece Rosas Rojas</bookstore:tieneTitulo>
+        <bookstore:tieneValoracion rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</bookstore:tieneValoracion>
     </owl:NamedIndividual>
     
 
@@ -914,6 +952,9 @@ Creado por: Pablo Valenzuela Álvarez.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="http://www.bookstore.com/ontology/bookstore#Tren">
         <rdf:type rdf:resource="http://www.bookstore.com/ontology/bookstore#Lector"/>
+        <bookstore:haComprado rdf:resource="http://www.bookstore.com/ontology/bookstore#ElRetornoDelRey"/>
+        <bookstore:haComprado rdf:resource="http://www.bookstore.com/ontology/bookstore#LaComunidadDelAnillo"/>
+        <bookstore:haComprado rdf:resource="http://www.bookstore.com/ontology/bookstore#LasDosTorres"/>
     </owl:NamedIndividual>
     
 
@@ -935,6 +976,8 @@ Creado por: Pablo Valenzuela Álvarez.</rdfs:comment>
         <bookstore:tieneGenero rdf:resource="http://www.bookstore.com/ontology/bookstore#Misterio"/>
         <bookstore:tieneAñoPublicacion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2006</bookstore:tieneAñoPublicacion>
         <bookstore:tienePrecio rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">25</bookstore:tienePrecio>
+        <bookstore:tieneTitulo>Veneno de Cristal</bookstore:tieneTitulo>
+        <bookstore:tieneValoracion rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"></bookstore:tieneValoracion>
     </owl:NamedIndividual>
     
 
@@ -951,6 +994,11 @@ Creado por: Pablo Valenzuela Álvarez.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="http://www.bookstore.com/ontology/bookstore#Yvanka">
         <rdf:type rdf:resource="http://www.bookstore.com/ontology/bookstore#Lector"/>
+        <bookstore:haComprado rdf:resource="http://www.bookstore.com/ontology/bookstore#Dune"/>
+        <bookstore:haComprado rdf:resource="http://www.bookstore.com/ontology/bookstore#ElRetornoDelRey"/>
+        <bookstore:haComprado rdf:resource="http://www.bookstore.com/ontology/bookstore#LaComunidadDelAnillo"/>
+        <bookstore:haComprado rdf:resource="http://www.bookstore.com/ontology/bookstore#LasDosTorres"/>
+        <bookstore:haComprado rdf:resource="http://www.bookstore.com/ontology/bookstore#ParqueJurásico"/>
     </owl:NamedIndividual>
     
 
