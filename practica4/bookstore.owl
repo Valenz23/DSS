@@ -32,6 +32,7 @@ Creado por: Pablo Valenzuela Álvarez.</rdfs:comment>
     <!-- http://www.bookstore.com/ontology/bookstore#compradoPor -->
 
     <owl:ObjectProperty rdf:about="http://www.bookstore.com/ontology/bookstore#compradoPor">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <owl:inverseOf rdf:resource="http://www.bookstore.com/ontology/bookstore#haComprado"/>
         <rdfs:domain rdf:resource="http://www.bookstore.com/ontology/bookstore#Libro"/>
         <rdfs:range rdf:resource="http://www.bookstore.com/ontology/bookstore#Lector"/>
@@ -42,6 +43,7 @@ Creado por: Pablo Valenzuela Álvarez.</rdfs:comment>
     <!-- http://www.bookstore.com/ontology/bookstore#esColeccionDe -->
 
     <owl:ObjectProperty rdf:about="http://www.bookstore.com/ontology/bookstore#esColeccionDe">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <owl:inverseOf rdf:resource="http://www.bookstore.com/ontology/bookstore#perteneceColeccion"/>
         <rdfs:domain rdf:resource="http://www.bookstore.com/ontology/bookstore#Coleccion"/>
         <rdfs:range rdf:resource="http://www.bookstore.com/ontology/bookstore#Libro"/>
@@ -74,6 +76,7 @@ Creado por: Pablo Valenzuela Álvarez.</rdfs:comment>
     <!-- http://www.bookstore.com/ontology/bookstore#haComprado -->
 
     <owl:ObjectProperty rdf:about="http://www.bookstore.com/ontology/bookstore#haComprado">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdfs:domain rdf:resource="http://www.bookstore.com/ontology/bookstore#Lector"/>
         <rdfs:range rdf:resource="http://www.bookstore.com/ontology/bookstore#Libro"/>
     </owl:ObjectProperty>
@@ -104,6 +107,7 @@ Creado por: Pablo Valenzuela Álvarez.</rdfs:comment>
     <!-- http://www.bookstore.com/ontology/bookstore#perteneceColeccion -->
 
     <owl:ObjectProperty rdf:about="http://www.bookstore.com/ontology/bookstore#perteneceColeccion">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdfs:domain rdf:resource="http://www.bookstore.com/ontology/bookstore#Libro"/>
         <rdfs:range rdf:resource="http://www.bookstore.com/ontology/bookstore#Coleccion"/>
     </owl:ObjectProperty>
@@ -174,6 +178,7 @@ Creado por: Pablo Valenzuela Álvarez.</rdfs:comment>
     <!-- http://www.bookstore.com/ontology/bookstore#tieneValoracion -->
 
     <owl:DatatypeProperty rdf:about="http://www.bookstore.com/ontology/bookstore#tieneValoracion">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
         <rdfs:domain rdf:resource="http://www.bookstore.com/ontology/bookstore#Libro"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
     </owl:DatatypeProperty>
