@@ -750,7 +750,7 @@ Creado por: Pablo Valenzuela Álvarez.</rdfs:comment>
         <rdf:type rdf:resource="http://www.bookstore.com/ontology/bookstore#LibroFisico"/>
         <bookstore:escritoPor rdf:resource="http://www.bookstore.com/ontology/bookstore#PierreLeonforte"/>
         <bookstore:publicadoPor rdf:resource="http://www.bookstore.com/ontology/bookstore#Hachette"/>
-        <bookstore:tieneGenero rdf:resource="http://www.bookstore.com/ontology/bookstore#NoFIccion"/>
+        <bookstore:tieneGenero rdf:resource="http://www.bookstore.com/ontology/bookstore#NoFiccion"/>
         <bookstore:tieneAñoPublicacion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2012</bookstore:tieneAñoPublicacion>
         <bookstore:tienePrecio rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">126.90</bookstore:tienePrecio>
         <bookstore:tieneTitulo>Louis Vuitton</bookstore:tieneTitulo>
@@ -825,9 +825,9 @@ Creado por: Pablo Valenzuela Álvarez.</rdfs:comment>
     
 
 
-    <!-- http://www.bookstore.com/ontology/bookstore#NoFIccion -->
+    <!-- http://www.bookstore.com/ontology/bookstore#NoFiccion -->
 
-    <owl:NamedIndividual rdf:about="http://www.bookstore.com/ontology/bookstore#NoFIccion">
+    <owl:NamedIndividual rdf:about="http://www.bookstore.com/ontology/bookstore#NoFiccion">
         <rdf:type rdf:resource="http://www.bookstore.com/ontology/bookstore#NoFiccion"/>
     </owl:NamedIndividual>
     
@@ -902,7 +902,7 @@ Creado por: Pablo Valenzuela Álvarez.</rdfs:comment>
         <rdf:type rdf:resource="http://www.bookstore.com/ontology/bookstore#LibroFisico"/>
         <bookstore:escritoPor rdf:resource="http://www.bookstore.com/ontology/bookstore#RachelCarson"/>
         <bookstore:publicadoPor rdf:resource="http://www.bookstore.com/ontology/bookstore#Booket"/>
-        <bookstore:tieneGenero rdf:resource="http://www.bookstore.com/ontology/bookstore#NoFIccion"/>
+        <bookstore:tieneGenero rdf:resource="http://www.bookstore.com/ontology/bookstore#NoFiccion"/>
         <bookstore:tieneAñoPublicacion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1962</bookstore:tieneAñoPublicacion>
         <bookstore:tienePrecio rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">12</bookstore:tienePrecio>
         <bookstore:tieneTitulo>Primavera Silenciosa</bookstore:tieneTitulo>
@@ -944,7 +944,7 @@ Creado por: Pablo Valenzuela Álvarez.</rdfs:comment>
         <rdf:type rdf:resource="http://www.bookstore.com/ontology/bookstore#Ebook"/>
         <bookstore:escritoPor rdf:resource="http://www.bookstore.com/ontology/bookstore#CarlosFonseca"/>
         <bookstore:publicadoPor rdf:resource="http://www.bookstore.com/ontology/bookstore#Booket"/>
-        <bookstore:tieneGenero rdf:resource="http://www.bookstore.com/ontology/bookstore#NoFIccion"/>
+        <bookstore:tieneGenero rdf:resource="http://www.bookstore.com/ontology/bookstore#NoFiccion"/>
         <bookstore:tieneAñoPublicacion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2005</bookstore:tieneAñoPublicacion>
         <bookstore:tienePrecio rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5</bookstore:tienePrecio>
         <bookstore:tieneTitulo>Trece Rosas Rojas</bookstore:tieneTitulo>
@@ -982,7 +982,7 @@ Creado por: Pablo Valenzuela Álvarez.</rdfs:comment>
         <bookstore:tieneAñoPublicacion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2006</bookstore:tieneAñoPublicacion>
         <bookstore:tienePrecio rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">25</bookstore:tienePrecio>
         <bookstore:tieneTitulo>Veneno de Cristal</bookstore:tieneTitulo>
-        <bookstore:tieneValoracion rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"></bookstore:tieneValoracion>
+        <bookstore:tieneValoracion rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</bookstore:tieneValoracion>
     </owl:NamedIndividual>
     
 
@@ -1023,16 +1023,6 @@ Creado por: Pablo Valenzuela Álvarez.</rdfs:comment>
             <rdf:Description rdf:about="http://www.bookstore.com/ontology/bookstore#Editorial"/>
             <rdf:Description rdf:about="http://www.bookstore.com/ontology/bookstore#Genero"/>
             <rdf:Description rdf:about="http://www.bookstore.com/ontology/bookstore#Lector"/>
-            <rdf:Description rdf:about="http://www.bookstore.com/ontology/bookstore#Libro"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.bookstore.com/ontology/bookstore#Autor"/>
-            <rdf:Description rdf:about="http://www.bookstore.com/ontology/bookstore#Coleccion"/>
-            <rdf:Description rdf:about="http://www.bookstore.com/ontology/bookstore#Editorial"/>
-            <rdf:Description rdf:about="http://www.bookstore.com/ontology/bookstore#Genero"/>
             <rdf:Description rdf:about="http://www.bookstore.com/ontology/bookstore#Libro"/>
         </owl:members>
     </rdf:Description>

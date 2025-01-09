@@ -11,7 +11,7 @@ Q2:
 
 PREFIX ex: <http://www.bookstore.com/ontology/bookstore#>
 SELECT ?titulo WHERE { 
-  ?libro ex:tieneGenero ex:NoFIccion .
+  ?libro ex:tieneGenero ex:NoFiccion .
   ?libro ex:tieneTitulo ?titulo .
 }
 
