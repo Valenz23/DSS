@@ -994,7 +994,6 @@ Creado por: Pablo Valenzuela Álvarez.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="http://www.bookstore.com/ontology/bookstore#Yvanka">
         <rdf:type rdf:resource="http://www.bookstore.com/ontology/bookstore#Lector"/>
-        <bookstore:haComprado rdf:resource="http://www.bookstore.com/ontology/bookstore#Dune"/>
         <bookstore:haComprado rdf:resource="http://www.bookstore.com/ontology/bookstore#ElRetornoDelRey"/>
         <bookstore:haComprado rdf:resource="http://www.bookstore.com/ontology/bookstore#LaComunidadDelAnillo"/>
         <bookstore:haComprado rdf:resource="http://www.bookstore.com/ontology/bookstore#LasDosTorres"/>
@@ -1011,6 +1010,17 @@ Creado por: Pablo Valenzuela Álvarez.</rdfs:comment>
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.bookstore.com/ontology/bookstore#Autor"/>
+            <rdf:Description rdf:about="http://www.bookstore.com/ontology/bookstore#Coleccion"/>
+            <rdf:Description rdf:about="http://www.bookstore.com/ontology/bookstore#Editorial"/>
+            <rdf:Description rdf:about="http://www.bookstore.com/ontology/bookstore#Genero"/>
+            <rdf:Description rdf:about="http://www.bookstore.com/ontology/bookstore#Lector"/>
+            <rdf:Description rdf:about="http://www.bookstore.com/ontology/bookstore#Libro"/>
+        </owl:members>
+    </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
