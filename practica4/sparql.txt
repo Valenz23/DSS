@@ -27,10 +27,11 @@ SELECT ?titulo ?valoracion WHERE {
 Q4: 
 
 PREFIX ex: <http://www.bookstore.com/ontology/bookstore#>
-SELECT ?lector ?titulo WHERE { 
+SELECT ?lector (GROUP_CONCAT(?titulo; SEPARATOR=", ") AS ?librosComprados) WHERE { 
   ?lector ex:haComprado ?libro .
   ?libro ex:tieneTitulo ?titulo .
 }
+GROUP BY ?lector
 
 Q5:
 
